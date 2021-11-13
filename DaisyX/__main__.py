@@ -357,8 +357,7 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"*😍 𝙷𝙸 𝙶𝙻𝙰𝙳 𝚃𝙾 𝚂𝙴𝙴 𝚈𝙾𝚈 𝙰𝙶𝙰𝙸𝙽,𝙹𝚄𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝚂𝙴𝙴 𝙼𝚈 𝙿𝙾𝚆𝙴𝚁𝚂 
-                   𝚃𝙾 Know More About Me By Clicking The Below Buttons 👇",
+            text=f"😍 𝙷𝙸 𝙶𝙻𝙰𝙳 𝚃𝙾 𝚂𝙴𝙴 𝚈𝙾𝚄 𝙰𝙶𝙰𝙸𝙽,𝙹𝚄𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝚂𝙴𝙴 𝙼𝚈 𝙿𝙾𝚅𝙴𝚁 𝚃𝙾 Know More About Me By Clicking The Below Buttons 👇",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -374,7 +373,7 @@ def DaisyX_about_callback(update, context):
                     [
                         InlineKeyboardButton(
                             text="𝙷𝚎𝚕𝚙", callback_data="help_back"
-                        )
+                        
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
                 ]
