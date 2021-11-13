@@ -76,12 +76,12 @@ buttons = [
                  text='➕ Add Me To Your Groups ➕', url="http://t.me/TESSA_DOG_BOT?startgroup=true"),
             ],[
             InlineKeyboardButton(
-                 text='𝚄𝙿𝙳𝙰𝚃𝙴𝚂, url="https://t.me/TESSA_DOG_UPDATES"),
+                 text='𝚄𝙿𝙳𝙰𝚃𝙴𝚂, url="https://t.me/TESSA_DOG_UPDATES")
             InlineKeyboardButton(
                  text='♻️Group', url="https://t.me/TESSA_DOG_SUPPORT"),
             ],[
             InlineKeyboardButton(
-                 text='ℹ️ Help', callback_data="help_back"),
+                 text='ℹ️ Help', callback_data="help_back")
             InlineKeyboardButton(
                  text='😊 About', callback_data="aboutmanu_"),
             ],[
