@@ -70,19 +70,17 @@ PM_START_TEXT = """
 ✪ Make sure you read *INFO* Section Below ✪ 
 """
 
-buttons = [
-    [
-        InlineKeyboardButton(text="🚀 INFO 🚀", callback_data="aboutmanu_"),
-    ],
-    [
-        InlineKeyboardButton(text="❓ Help & Commands ❓", callback_data="help_back"),
-    ],
-    [
-        InlineKeyboardButton(
-            text="💫 𝙰𝙳𝙳 𝙼𝙴𝙷 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 💫", url="t.me/daisyXBot?startgroup=true"
-        ),
-    ],
-]
+        buttons = [[
+            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url='http://t.me/TESSA_DOG_BOT?startgroup=true')
+            ],[
+            InlineKeyboardButt𝚄𝙿', url='https://t.me/TESSA_DOG_UPDATES'),
+            InlineKeyboardButton('♻️Group', url='https://t.me/TESSA_DOG_SUPPORT')
+            ],[
+            InlineKeyboardButton('ℹ️ Help', callback_data='help_back'),
+            InlineKeyboardButton('😊 About', callback_data='aboutmanu_')
+            ],[
+            InlineKeyboardButton('𝙳𝙴𝚅𝙾𝙻𝙾𝙿𝙴𝚁', url='https://t.me/N_A_V_I_P_A_V_I')
+        ]]
 
 
 HELP_STRINGS = f"""
@@ -390,7 +388,7 @@ def DaisyX_about_callback(update, context):
         query.message.edit_text(
             text=f"* ｢ BASIC HELP 」*"
             f"\nIf You Can Also Add {dispatcher.bot.first_name} To Your Chats By Clicking [Here](http://t.me/{dispatcher.bot.username}?startgroup=true) And Selecting Chat. \n"
-            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [InfinityJE](https://t.me/infinityje).\n"
+            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [TESSA SUPPORT](https://t.me/TESSA_DOG_SUPPORT).\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -402,6 +400,9 @@ def DaisyX_about_callback(update, context):
                         ),
                         InlineKeyboardButton(
                             text="Anti Spam", callback_data="aboutmanu_spamprot"
+                        ),
+                        InlineKeyboardButton(
+                            text="Autofilter", callback_data="autofilter"
                         ),
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_")],
@@ -489,8 +490,56 @@ def DaisyX_about_callback(update, context):
                 ]
             ),
         )
+    elif query.data == "autofilter":
+        query.message.edit_text(
+        text=[Auto Filter](https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg)
 
+        NOTE:
+        1. Make me the admin of your channel if it's private.
+        2. make sure that your channel does not contains camrips, porn and fake files.
+        3. Forward the last message to me with quotes.
+        I'll add all the files in that channel to my db.
+        parse_mode=ParseMode.HTML,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text=Status", callback_data="Status"
+                        ),
+                        InlineKeyboardButton(
+                            text="EXTRA", callback_data="extra"
+                        ),
+                        InlineKeyboardButton(text="Back", callback_data="aboutmanu_"),
+                    ]
+                ]
+            ),
+        )
+    elif query.data == "Status":
+        query.message.edit_text(
+        text=★ 𝚃𝙾𝚃𝙰𝙻 𝙵𝙸𝙻𝙴𝚂: 1253516
+             ★ 𝚃𝙾𝚃𝙰𝙻 𝚄𝚂𝙴𝚁𝚂: 63
+             ★ 𝚃𝙾𝚃𝙰𝙻 𝙲𝙷𝙰𝚃𝚂: 10
+             ★ 𝚄𝚂𝙴𝙳 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: 339.36 MB 𝙼𝚒𝙱
+             ★ 𝙵𝚁𝙴𝙴 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: 172.64 MB 𝙼𝚒𝙱
+             parse_mode=ParseMode.HTML,
+                 reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Back", callback_data"autofilter")]]
+            ),
+     elif query.data == "extra":
+        query.message.edit_text(
+        text=Help: Extra Modules
 
+             NOTE:
+             these are the extra features of 𝚃𝙴𝚂𝚂𝙰
+
+             Commands and Usage:
+
+             • /imdb  - get the film information from IMDb source.
+             • /search  - get the film information from various sources.
+             parse_mode=ParseMode.HTML,
+                 reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Back", callback_data"autofilter")]]
+            ),
 @run_async
 @typing_action
 def get_help(update, context):
