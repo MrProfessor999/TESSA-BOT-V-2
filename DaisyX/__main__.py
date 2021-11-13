@@ -70,17 +70,26 @@ PM_START_TEXT = """
 ✪ Make sure you read *INFO* Section Below ✪ 
 """
 
-        buttons = [[
-            InlineKeyboardButton('➕ Add Me To Your Groups ➕', url='http://t.me/TESSA_DOG_BOT?startgroup=true')
+buttons = [
+         [
+            InlineKeyboardButton(
+                 text='➕ Add Me To Your Groups ➕', url="http://t.me/TESSA_DOG_BOT?startgroup=true"),
             ],[
-            InlineKeyboardButton('𝚄𝙿𝙳𝙰𝚃𝙴𝚂, url='https://t.me/TESSA_DOG_UPDATES'),
-            InlineKeyboardButton('♻️Group', url='https://t.me/TESSA_DOG_SUPPORT')
+            InlineKeyboardButton(
+                 text='𝚄𝙿𝙳𝙰𝚃𝙴𝚂, url="https://t.me/TESSA_DOG_UPDATES"),
+            InlineKeyboardButton(
+                 text='♻️Group', url="https://t.me/TESSA_DOG_SUPPORT"),
             ],[
-            InlineKeyboardButton('ℹ️ Help', callback_data='help_back'),
-            InlineKeyboardButton('😊 About', callback_data='aboutmanu_')
+            InlineKeyboardButton(
+                 text='ℹ️ Help', callback_data="help_back"),
+            InlineKeyboardButton(
+                 text='😊 About', callback_data="aboutmanu_"),
             ],[
-            InlineKeyboardButton('𝙳𝙴𝚅𝙾𝙻𝙾𝙿𝙴𝚁', url='https://t.me/N_A_V_I_P_A_V_I')
-        ]]
+            InlineKeyboardButton(
+                 text='𝙳𝙴𝚅𝙾𝙻𝙾𝙿𝙴𝚁', url="https://t.me/N_A_V_I_P_A_V_I"
+           ),
+        ]
+     ]
 
 
 HELP_STRINGS = f"""
