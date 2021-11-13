@@ -78,12 +78,12 @@ buttons = [
             InlineKeyboardButton(
                  text='𝚄𝙿𝙳𝙰𝚃𝙴𝚂', url="https://t.me/TESSA_DOG_UPDATES")
             InlineKeyboardButton(
-                 text='♻️Group', url="https://t.me/TESSA_DOG_SUPPORT"),
+                 text='♻️Group', url="https://t.me/TESSA_DOG_SUPPORT")
             ],[
             InlineKeyboardButton(
                  text='ℹ️ Help', callback_data="help_back")
             InlineKeyboardButton(
-                 text='😊 About', callback_data="aboutmanu_"),
+                 text='😊 About', callback_data="aboutmanu_")
             ],[
             InlineKeyboardButton(
                  text='𝙳𝙴𝚅𝙾𝙻𝙾𝙿𝙴𝚁', url="https://t.me/N_A_V_I_P_A_V_I"
