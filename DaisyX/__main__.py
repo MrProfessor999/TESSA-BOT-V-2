@@ -73,7 +73,7 @@ PM_START_TEXT = """
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url='http://t.me/TESSA_DOG_BOT?startgroup=true')
             ],[
-            InlineKeyboardButt𝚄𝙿', url='https://t.me/TESSA_DOG_UPDATES'),
+            InlineKeyboardButton('𝚄𝙿𝙳𝙰𝚃𝙴𝚂, url='https://t.me/TESSA_DOG_UPDATES'),
             InlineKeyboardButton('♻️Group', url='https://t.me/TESSA_DOG_SUPPORT')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help_back'),
