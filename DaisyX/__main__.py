@@ -75,8 +75,8 @@ buttons = [
           InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
     ],  
     [ 
-          InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_howto"), 
-          InlineKeyboardButton( text="😊𝙰𝚋𝚘𝚞𝚝", callback_data="aboutmanu_"),
+          InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_"), 
+          InlineKeyboardButton( text="😊𝙰𝚋𝚘𝚞𝚝", callback_data="aboutmanu_tac"),
     ],
     [ 
           InlineKeyboardButton( text="❤️𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ❤️", url="https://t.me/TESSA_DOG_SUPPORT" 
