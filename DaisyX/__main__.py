@@ -504,7 +504,7 @@ def DaisyX_about_callback(update, context):
             "*2. make sure that your channel does not contains camrips, porn and fake files.*"
             "*3. Forward the last message to me with quotes.*"
             "*I'll add all the files in that channel to my db.*"
-            parse_mode=ParseMode.HTML,
+            parse_mode=ParseMode.MARKDOWN,            
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
