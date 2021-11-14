@@ -80,7 +80,7 @@ buttons = [
     ],
     [ 
           InlineKeyboardButton( text="❤️𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ❤️", url="https://t.me/TESSA_DOG_SUPPORT"), 
-          InlineKeyboardButton( text="🔍SEARCH🔎", callback_data="aboutmanu_tac"),
+          InlineKeyboardButton( text="🔍SEARCH🔎", switch_inline_query_current_chat=''),
     ],
     [
           InlineKeyboardButton( text="👨‍💻DEVOLOPER", url="https://t.me/N_A_V_I_P_A_V_I"
