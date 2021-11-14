@@ -72,7 +72,7 @@ PM_START_TEXT = """
 
 buttons = [ 
     [
-          InlineKeyboardButton( text="➕⚡Add ME⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
+          InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
     ],  
     [ 
           InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="help_back"), 
@@ -83,13 +83,7 @@ buttons = [
        ),
     ],
 ]
-          elif:
-        await cmd.reply_photo(
-            photo=f"https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg",
-            caption=START_MSG,
-            
-    
-          )
+          
 
     
 
