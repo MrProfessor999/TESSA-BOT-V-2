@@ -530,17 +530,18 @@ def DaisyX_about_callback(update, context):
                  reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="autofilter")]]
             ),
+         )
      elif query.data == "extra":
-        query.message.edit_text(
-        text="*Extra Modules*"
+         query.message.edit_text(
+         text="*Extra Modules*"
 
-             "NOTE:"
-             "these are the extra features of 𝚃𝙴𝚂𝚂𝙰"
+              "NOTE:"
+              "these are the extra features of 𝚃𝙴𝚂𝚂𝙰"
 
-             "Commands and Usage:"
+              "Commands and Usage:"
 
-             "• /imdb  - get the film information from IMDb source."
-             "• /search  - get the film information from various sources.",
+              "• /imdb  - get the film information from IMDb source."
+              "• /search  - get the film information from various sources.",
              parse_mode=ParseMode.HTML,
                  reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="autofilter")]]
