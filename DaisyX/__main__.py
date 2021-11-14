@@ -83,11 +83,11 @@ buttons = [
        ),
     ],
 ]
-          else:
+          elif:
         await cmd.reply_photo(
             photo=f"https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg",
             caption=START_MSG,
-            reply_markup=InlineKeyboardMarkup('
+            
     
           )
 
