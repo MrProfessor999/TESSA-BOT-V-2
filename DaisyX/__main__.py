@@ -432,11 +432,11 @@ def DaisyX_about_callback(update, context):
     elif query.data == "aboutmanu_permis":
         query.message.edit_text(
             text=f"<b> ｢ AUTOFILTER 」</b>"
-                  "*NOTE:*"
-                  "*1. Make me the admin of your channel if it's private.*"
-                  "*2. make sure that your channel does not contains camrips, porn and fake files.*"
-                  "*3. Forward the last message to me with quotes.*"
-                  "*I'll add all the files in that channel to my db.*",
+                  f"\n\n*NOTE:*.\n"
+                  f"\n\n*1. Make me the admin of your channel if it's private.*\n"
+                  f"\n\n*2. make sure that your channel does not contains camrips, porn and fake files.*\n"
+                  f"\n\n*3. Forward the last message to me with quotes.*\n"
+                  f"\n\n*I'll add all the files in that channel to my db.*\n",
             parse_mode=ParseMode.MARKDOWN,            
             reply_markup=InlineKeyboardMarkup(
                 [
