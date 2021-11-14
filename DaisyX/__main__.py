@@ -63,7 +63,7 @@ from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-𝙷𝙴𝙻𝙻𝙾 𝚃𝚑𝚎𝚛𝚎, 𝙸𝙰𝙼 𝚃𝙴𝚂𝚂𝙰
+𝙷𝙴𝙻𝙻𝙾 𝚃𝚑𝚎𝚛𝚎, 𝙸𝙰𝙼 [𝚃𝙴𝚂𝚂𝙰](https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg)
 
 𝙸𝚊𝚖 𝚊 𝙿𝚘𝚠𝚎𝚛𝚏𝚞𝚕𝚕 𝚋𝚘𝚝 ✌︎ 𝙹𝚞𝚜𝚝 𝚊𝚍𝚍 𝚗𝚎 𝚝𝚘 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 𝚊𝚗𝚍 𝚜𝚎𝚎 𝚖𝚢 𝚙𝚘𝚠𝚎𝚛 😉
 
@@ -497,7 +497,7 @@ def DaisyX_about_callback(update, context):
         )
     elif query.data == "autofilter":
         query.message.edit_text(
-        text=Auto Filter
+        text="*Auto Filter*"
 
         NOTE:
         1. Make me the admin of your channel if it's private.
@@ -521,7 +521,7 @@ def DaisyX_about_callback(update, context):
         )
     elif query.data == "Status":
         query.message.edit_text(
-        text=★ 𝚃𝙾𝚃𝙰𝙻 𝙵𝙸𝙻𝙴𝚂: 1253516
+        text="*★ 𝚃𝙾𝚃𝙰𝙻 𝙵𝙸𝙻𝙴𝚂: 1253516*"
              ★ 𝚃𝙾𝚃𝙰𝙻 𝚄𝚂𝙴𝚁𝚂: 63
              ★ 𝚃𝙾𝚃𝙰𝙻 𝙲𝙷𝙰𝚃𝚂: 10
              ★ 𝚄𝚂𝙴𝙳 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: 339.36 MB 𝙼𝚒𝙱
@@ -532,7 +532,7 @@ def DaisyX_about_callback(update, context):
             ),
      elif query.data == "extra":
         query.message.edit_text(
-        text=Help: Extra Modules
+        text="*Extra Modules*"
 
              NOTE:
              these are the extra features of 𝚃𝙴𝚂𝚂𝙰
