@@ -503,29 +503,29 @@ def DaisyX_about_callback(update, context):
             "*1. Make me the admin of your channel if it's private.*"
             "*2. make sure that your channel does not contains camrips, porn and fake files.*"
             "*3. Forward the last message to me with quotes.*"
-            "*I'll add all the files in that channel to my db.*"
+            "*I'll add all the files in that channel to my db.*",
             parse_mode=ParseMode.MARKDOWN,            
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text=Status", callback_data="Status"
+                            text=💫Status💫", callback_data="status"
                         ),
                         InlineKeyboardButton(
-                            text="EXTRA", callback_data="extra"
+                            text="⚡EXTRA⚡", callback_data="extra"
                         ),
                         InlineKeyboardButton(text="Back", callback_data="aboutmanu_"),
                     ]
                 ]
             ),
         )
-    elif query.data == "Status":
+    elif query.data == "status":
         query.message.edit_text(
         text="*★ 𝚃𝙾𝚃𝙰𝙻 𝙵𝙸𝙻𝙴𝚂: 1253516*"
-             "★ 𝚃𝙾𝚃𝙰𝙻 𝚄𝚂𝙴𝚁𝚂: 63"
-             "★ 𝚃𝙾𝚃𝙰𝙻 𝙲𝙷𝙰𝚃𝚂: 10"
+             "★ 𝚃𝙾𝚃𝙰𝙻 𝚄𝚂𝙴𝚁𝚂: 56"
+             "★ 𝚃𝙾𝚃𝙰𝙻 𝙲𝙷𝙰𝚃𝚂: 2"
              "★ 𝚄𝚂𝙴𝙳 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: 339.36 MB 𝙼𝚒𝙱"
-             "★ 𝙵𝚁𝙴𝙴 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: 172.64 MB 𝙼𝚒𝙱"
+             "★ 𝙵𝚁𝙴𝙴 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: 172.64 MB 𝙼𝚒𝙱",
              parse_mode=ParseMode.HTML,
                  reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data"autofilter")]]
@@ -540,7 +540,7 @@ def DaisyX_about_callback(update, context):
              "Commands and Usage:"
 
              "• /imdb  - get the film information from IMDb source."
-             "• /search  - get the film information from various sources."
+             "• /search  - get the film information from various sources.",
              parse_mode=ParseMode.HTML,
                  reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data"autofilter")]]
