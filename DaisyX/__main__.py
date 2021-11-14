@@ -83,9 +83,14 @@ buttons = [
        ),
     ],
 ]
-
-  
-
+          reply_markup = InlineKeyboardMarkup(buttons)
+        await message.reply_photo(
+                      photo= 
+            caption=PM_START_TEXT,
+            reply_markup=reply_markup,
+            parse_mode='html'
+    
+          )
 
     
 
@@ -499,7 +504,7 @@ def DaisyX_about_callback(update, context):
         )
     elif query.data == "autofilter":
         query.message.edit_text(
-        text=[Auto Filter](https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg)
+        text=Auto Filter
 
         NOTE:
         1. Make me the admin of your channel if it's private.
