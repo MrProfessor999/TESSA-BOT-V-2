@@ -401,13 +401,11 @@ def DaisyX_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Admins Settings", callback_data="aboutmanu_permis"
+                            text="AUTOFILTER", callback_data="aboutmanu_permis"
                         ),
                         InlineKeyboardButton(
                             text="Anti Spam", callback_data="aboutmanu_spamprot"
-                        ),
-                        InlineKeyboardButton(
-                            text="Autofilter", callback_data="autofilter"
+                        
                         ),
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_")],
@@ -429,17 +427,29 @@ def DaisyX_about_callback(update, context):
 
     elif query.data == "aboutmanu_permis":
         query.message.edit_text(
-            text=f"<b> ｢ Admin Permissions 」</b>"
-            f"\nTo avoid slowing down, {dispatcher.bot.first_name} caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), {dispatcher.bot.first_name} will only find out ~10 minutes later."
-            f"\n\nIF you want to update them immediately, you can use the /admincache command,thta'll force {dispatcher.bot.first_name} to check who the admins are again and their permissions"
-            f"\n\nIf you are getting a message saying:"
-            f"\n<Code>You must be this chat administrator to perform this action!</code>"
-            f"\nThis has nothing to do with {dispatcher.bot.first_name}'s rights; this is all about YOUR permissions as an admin. {dispatcher.bot.first_name} respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with {dispatcher.bot.first_name}. Similarly, to change {dispatcher.bot.first_name} settings, you need to have the Change group info permission."
-            f"\n\nThe message very clearly says that you need these rights - <i>not {dispatcher.bot.first_name}.</i>",
-            parse_mode=ParseMode.HTML,
+            text=f"<b> ｢ AUTOFILTER 」</b>"
+                  "*NOTE:*"
+                  "*1. Make me the admin of your channel if it's private.*"
+                  "*2. make sure that your channel does not contains camrips, porn and fake files.*"
+                  "*3. Forward the last message to me with quotes.*"
+                  "*I'll add all the files in that channel to my db.*",
+            parse_mode=ParseMode.MARKDOWN,            
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="💫Status💫", callback_data="status"
+                        ),
+                        InlineKeyboardButton(
+                            text="⚡EXTRA⚡", callback_data="extra"
+                        ),
+                        [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_")]]
+                    ]
+                ]
             ),
+        )
+                
+           
         )
     elif query.data == "aboutmanu_spamprot":
         query.message.edit_text(
@@ -488,36 +498,13 @@ def DaisyX_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Credits", callback_data="aboutmanu_credit"
+                            text="DEVOLOPER", callback_data="aboutmanu_credit"
                         ),
                         InlineKeyboardButton(text="Back", callback_data="aboutmanu_"),
                     ]
                 ]
             ),
-        )
-    elif query.data == "autofilter":
-        query.message.edit_text(
-            text="*Auto Filter*"
-
-            "*NOTE:*"
-            "*1. Make me the admin of your channel if it's private.*"
-            "*2. make sure that your channel does not contains camrips, porn and fake files.*"
-            "*3. Forward the last message to me with quotes.*"
-            "*I'll add all the files in that channel to my db.*",
-            parse_mode=ParseMode.MARKDOWN,            
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton(
-                            text="💫Status💫", callback_data="status"
-                        ),
-                        InlineKeyboardButton(
-                            text="⚡EXTRA⚡", callback_data="extra"
-                        ),
-                        InlineKeyboardButton(text="Back", callback_data="aboutmanu_"),
-                    ]
-                ]
-            ),
+        
         )
     elif query.data == "status":
         query.message.edit_text(
