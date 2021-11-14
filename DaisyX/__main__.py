@@ -505,11 +505,11 @@ def DaisyX_about_callback(update, context):
         )
     elif query.data == "status":
         query.message.edit_text(
-        text=f"*★ 𝚃𝙾𝚃𝙰𝙻 𝙵𝙸𝙻𝙴𝚂: 1253516*\n"
-             f\n"★ 𝚃𝙾𝚃𝙰𝙻 𝚄𝚂𝙴𝚁𝚂: 56f\n"
-             f\n"★ 𝚃𝙾𝚃𝙰𝙻 𝙲𝙷𝙰𝚃𝚂: 2f\n"
-             f\n"★ 𝚄𝚂𝙴𝙳 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: 339.36 MB 𝙼𝚒𝙱f\n"
-             f\n"★ 𝙵𝚁𝙴𝙴 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: 172.64 MB 𝙼𝚒𝙱f\n",
+        text=f"\n★ 𝚃𝙾𝚃𝙰𝙻 𝙵𝙸𝙻𝙴𝚂: 1253516*\n"
+             f"\n★ 𝚃𝙾𝚃𝙰𝙻 𝚄𝚂𝙴𝚁𝚂: 56f\n"
+             f"\n★ 𝚃𝙾𝚃𝙰𝙻 𝙲𝙷𝙰𝚃𝚂: 2f\n"
+             f"\n★ 𝚄𝚂𝙴𝙳 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: 339.36 MB 𝙼𝚒𝙱f\n"
+             f"\n★ 𝙵𝚁𝙴𝙴 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: 172.64 MB 𝙼𝚒𝙱f\n",
              parse_mode=ParseMode.HTML,
                  reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="autofilter")]]
@@ -517,17 +517,16 @@ def DaisyX_about_callback(update, context):
         )
     elif query.data == "extra":
         query.message.edit_text(
-        text="*Extra Modules*"
+        text=f"\n*Extra Modules*"
 
-             "NOTE:"
-             "these are the extra features of 𝚃𝙴𝚂𝚂𝙰"
+             f"\nNOTE:"
+             f"\nthese are the extra features of 𝚃𝙴𝚂𝚂𝙰"
 
+             f"\nCommands and Usage:"
 
-             "Commands and Usage:"
-
-             "• /imdb  - get the film information from IMDb source."
+             f"/n• /imdb  - get the film information from IMDb source."
           
-             "• /search  - get the film information from various sources.",
+             f"\n• /search  - get the film information from various sources.",
              parse_mode=ParseMode.HTML,
                  reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="autofilter")]]
