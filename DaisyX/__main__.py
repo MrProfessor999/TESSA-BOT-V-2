@@ -509,7 +509,7 @@ def DaisyX_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text=💫Status💫", callback_data="status"
+                            text="💫Status💫", callback_data="status"
                         ),
                         InlineKeyboardButton(
                             text="⚡EXTRA⚡", callback_data="extra"
