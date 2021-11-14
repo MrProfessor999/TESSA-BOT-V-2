@@ -63,7 +63,7 @@ from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-𝙷𝙴𝙻𝙻𝙾 𝚃𝚑𝚎𝚛𝚎, 𝙸𝙰𝙼 [𝚃𝙴𝚂𝚂𝙰](https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg)
+𝙷𝙴𝙻𝙻𝙾 𝚃𝚑𝚎𝚛𝚎, 𝙸𝙰𝙼 𝚃𝙴𝚂𝚂𝙰
 
 𝙸𝚊𝚖 𝚊 𝙿𝚘𝚠𝚎𝚛𝚏𝚞𝚕𝚕 𝚋𝚘𝚝 ✌︎ 𝙹𝚞𝚜𝚝 𝚊𝚍𝚍 𝚗𝚎 𝚝𝚘 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 𝚊𝚗𝚍 𝚜𝚎𝚎 𝚖𝚢 𝚙𝚘𝚠𝚎𝚛 😉
 
@@ -83,12 +83,11 @@ buttons = [
        ),
     ],
 ]
-          reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(
-                      photo= 
-            caption=PM_START_TEXT,
-            reply_markup=reply_markup,
-            parse_mode='html'
+          else:
+        await cmd.reply_photo(
+            photo=f"https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg",
+            caption=START_MSG,
+            reply_markup=InlineKeyboardMarkup('
     
           )
 
