@@ -528,7 +528,7 @@ def DaisyX_about_callback(update, context):
              "★ 𝙵𝚁𝙴𝙴 𝚂𝚃𝙾𝚁𝙰𝙶𝙴: 172.64 MB 𝙼𝚒𝙱",
              parse_mode=ParseMode.HTML,
                  reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data"autofilter")]]
+                [[InlineKeyboardButton(text="Back", callback_data="autofilter")]]
             ),
      elif query.data == "extra":
         query.message.edit_text(
@@ -543,7 +543,7 @@ def DaisyX_about_callback(update, context):
              "• /search  - get the film information from various sources.",
              parse_mode=ParseMode.HTML,
                  reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data"autofilter")]]
+                [[InlineKeyboardButton(text="Back", callback_data="autofilter")]]
             ),
 @run_async
 @typing_action
