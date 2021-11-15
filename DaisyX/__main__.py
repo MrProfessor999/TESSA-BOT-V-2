@@ -63,33 +63,37 @@ from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-Hello there, I'm [𝓓𝓪𝓲𝓼𝔂 𝓧](https://telegra.ph/file/473cc17913393959e0667.jpg)
+𝙷𝙴𝙻𝙻𝙾 𝚃𝚑𝚎𝚛𝚎, 𝙸𝙰𝙼 [𝚃𝙴𝚂𝚂𝙰](https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg)
 
-I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot and I will help in managing your group
+𝙸𝚊𝚖 𝚊 𝙿𝚘𝚠𝚎𝚛𝚏𝚞𝚕𝚕 𝚋𝚘𝚝 ✌︎ 𝙹𝚞𝚜𝚝 𝚊𝚍𝚍 𝚗𝚎 𝚝𝚘 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 𝚊𝚗𝚍 𝚜𝚎𝚎 𝚖𝚢 𝚙𝚘𝚠𝚎𝚛 😉
 
-✪ Make sure you read *INFO* Section Below ✪ 
+✪ Make sure you read *𝙷𝚎𝚕𝚙* Section Below ✪ 
 """
 
-buttons = [
+buttons = [ 
     [
-        InlineKeyboardButton(text="🚀 INFO 🚀", callback_data="aboutmanu_"),
+          InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
+    ],  
+    [ 
+          InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_"), 
+          InlineKeyboardButton( text="😊𝙰𝚋𝚘𝚞𝚝", callback_data="aboutmanu_tac"),
+    ],
+    [ 
+          InlineKeyboardButton( text="❤️𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ❤️", url="https://t.me/TESSA_DOG_SUPPORT"), 
+          InlineKeyboardButton( text="🔍SEARCH🔎", switch_inline_query_current_chat=''),
     ],
     [
-        InlineKeyboardButton(text="❓ Help & Commands ❓", callback_data="help_back"),
-    ],
-    [
-        InlineKeyboardButton(
-            text="💫 Add Daisy to your group 💫", url="t.me/daisyXBot?startgroup=true"
-        ),
+          InlineKeyboardButton( text="👨‍💻DEVOLOPER", url="https://t.me/N_A_V_I_P_A_V_I"
+       ),
     ],
 ]
 
 
+
 HELP_STRINGS = f"""
-*Main Commands :* [🤖](https://telegra.ph/file/473cc17913393959e0667.jpg)
+*Main Commands :* [🤖](https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg)
 ✪ /start: Starts me! You've probably already used this.
 ✪ /help: Click this, I'll let you know about myself!
-✪ /donate: You can support my creater using this command.
 ✪ /settings: 
    ◔ in PM: will send you your settings for all supported modules.
    ◔ in a Group: will redirect you to pm, with all that chat's settings.
@@ -99,9 +103,7 @@ HELP_STRINGS = f"""
 )
 
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
-You can donate to the original writer's of the Base code,
-Support them  [Inuka](t.me/InukaASiTH),[Jason](t.me/imjanindu),"""
+
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -360,27 +362,22 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"*😍 Hi again!  The name's {dispatcher.bot.first_name} 😍 \n\nAs  You I'm a next generational group management bot developed by Infinity_Bots.* "
-            f"\n\n 🔥 Join [Infinity_Bots](https://t.me/Infinity_Bots) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
-            f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
-            f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)](https://telegra.ph/file/473cc17913393959e0667.jpg)"
-            f"\n\n👇 You Can Know More About Me By Clicking The Below Buttons 👇",
+            text=f"😍 𝙷𝙸 𝙶𝙻𝙰𝙳 𝚃𝙾 𝚂𝙴𝙴 𝚈𝙾𝚄 𝙰𝙶𝙰𝙸𝙽,𝙹𝚄𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝚂𝙴𝙴 𝙼𝚈 𝙿𝙾𝚅𝙴𝚁 𝚃𝙾 Know More About Me By Clicking The Below Buttons 👇",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="How To Use Me", callback_data="aboutmanu_howto"
+                            text="𝙷𝚘𝚠 𝚝𝚘 𝚞𝚜𝚎 𝚖𝚎", callback_data="aboutmanu_howto"
                         ),
                         InlineKeyboardButton(
-                            text="T & C", callback_data="aboutmanu_tac"
+                            text="About", callback_data="aboutmanu_tac"
                         ),
                     ],
-                    [
-                        InlineKeyboardButton(
-                            text="❔Help & Commands", callback_data="help_back"
-                        )
+                    [InlineKeyboardButton(
+                         text="𝙷𝚎𝚕𝚙", callback_data="help_back"
+                        ),
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
                 ]
@@ -406,7 +403,7 @@ def DaisyX_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Admins Settings", callback_data="aboutmanu_permis"
+                            text="AUTOFILTER", callback_data="aboutmanu_permis"
                         ),
                         InlineKeyboardButton(
                             text="Anti Spam", callback_data="aboutmanu_spamprot"
