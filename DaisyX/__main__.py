@@ -209,9 +209,8 @@ def start(update: Update, context: CallbackContext):
 
             update.effective_message.reply_photo(IMGE,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
 
-          parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
-    
-         [InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
+                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(    
+        [[InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
     ],  
     [ 
           InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_"), 
