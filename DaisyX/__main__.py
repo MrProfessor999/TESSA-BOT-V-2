@@ -76,7 +76,21 @@ PM_START_TEXT = """
 
 ✪ Make sure you read *𝙷𝚎𝚕𝚙* Section Below ✪ 
 """
-
+buttons = [
+       [
+          InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
+    ],  
+    [ 
+          InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_"), 
+          InlineKeyboardButton( text="😊𝙰𝚋𝚘𝚞𝚝", callback_data="aboutmanu_tac"),
+    ],
+    [ 
+          InlineKeyboardButton( text="❤️𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ❤️", url="https://t.me/TESSA_DOG_SUPPORT"), 
+          InlineKeyboardButton( text="🔍SEARCH🔎", switch_inline_query_current_chat=''),
+    ],
+    [
+          InlineKeyboardButton( text="👨‍💻DEVOLOPER", url="https://t.me/N_A_V_I_P_A_V_I"),],]
+  
 
 
 
@@ -209,21 +223,13 @@ def start(update: Update, context: CallbackContext):
 
             update.effective_message.reply_photo(IMGE,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
 
-                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(    
-        [[InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
-    ],  
-    [ 
-          InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_"), 
-          InlineKeyboardButton( text="😊𝙰𝚋𝚘𝚞𝚝", callback_data="aboutmanu_tac"),
-    ],
-    [ 
-          InlineKeyboardButton( text="❤️𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ❤️", url="https://t.me/TESSA_DOG_SUPPORT"), 
-          InlineKeyboardButton( text="🔍SEARCH🔎", switch_inline_query_current_chat=''),
-    ],
-    [
-          InlineKeyboardButton( text="👨‍💻DEVOLOPER", url="https://t.me/N_A_V_I_P_A_V_I"),],]
-  
-            
+         else:
+            update.effective_message.reply_text(
+                PM_START_TEXT,
+                reply_markup=InlineKeyboardMarkup(buttons),
+                parse_mode=ParseMode.MARKDOWN,
+                timeout=60,
+            )        
          else:
              update.effective_message.reply_text(
                 "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
