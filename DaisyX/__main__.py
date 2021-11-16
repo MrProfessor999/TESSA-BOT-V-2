@@ -62,8 +62,15 @@ from DaisyX.modules.helper_funcs.chat_status import is_user_admin
 from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
+
+
+IMGE = "https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg"
+
+
+
+
 PM_START_TEXT = """
-𝙷𝙴𝙻𝙻𝙾 𝚃𝚑𝚎𝚛𝚎, 𝙸𝙰𝙼 [𝚃𝙴𝚂𝚂𝙰](https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg)
+𝙷𝙴𝙻𝙻𝙾 𝚃𝚑𝚎𝚛𝚎, 𝙸𝙰𝙼 𝚃𝙴𝚂𝚂𝙰
 
 𝙸𝚊𝚖 𝚊 𝙿𝚘𝚠𝚎𝚛𝚏𝚞𝚕𝚕 𝚋𝚘𝚝 ✌︎ 𝙹𝚞𝚜𝚝 𝚊𝚍𝚍 𝚗𝚎 𝚝𝚘 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 𝚊𝚗𝚍 𝚜𝚎𝚎 𝚖𝚢 𝚙𝚘𝚠𝚎𝚛 😉
 
@@ -214,13 +221,20 @@ def start(update: Update, context: CallbackContext):
 
             elif args[0][1:].isdigit() and "rules" in IMPORTED:
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
+        else:
+            first_name = update.effective_user.first_name
+
+            update.effective_message.reply_photo(IMGE,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
+
+
+
 
         else:
             update.effective_message.reply_text(
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
-                timeout=60,
+                timeout=200,
             )
     else:
         update.effective_message.reply_text(
