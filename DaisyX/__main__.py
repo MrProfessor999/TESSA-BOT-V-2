@@ -222,9 +222,7 @@ def start(update: Update, context: CallbackContext):
     ],
     [
           InlineKeyboardButton( text="👨‍💻DEVOLOPER", url="https://t.me/N_A_V_I_P_A_V_I"),],]
-       
-    
-
+  
             
          else:
              update.effective_message.reply_text(
