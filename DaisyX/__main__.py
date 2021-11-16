@@ -477,19 +477,12 @@ def DaisyX_about_callback(update, context):
     elif query.data == "aboutmanu_tac":
         query.message.edit_text(
             text=f"<b> ｢ ABOUT 」</b>"
-
             f"\n✯ 𝙼𝚈 𝙽𝙰𝙼𝙴:  𝚃𝙴𝚂𝚂𝙰."
-
             f"\n\n✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/N_A_V_I_P_A_V_I>༒⚔ 𝕄𝕣 ℙ𝕣𝕠𝕗𝕖𝕤𝕤𝕠𝕣⚔༒</a>"            
-
             f"\n\n✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼&𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽"
-
             f"\n✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹"
-
             f"\n✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱."
-
             f"\n\n✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v2.3.1 [ 𝙱𝙴𝚃𝙰 ]",
-
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -504,7 +497,31 @@ def DaisyX_about_callback(update, context):
         )
     elif query.data == "extra":
         query.message.edit_text(
-            text=f"
+            text=f"""Extra Modules
+            These are the extra features of Tessa
+            Commands and Usage:
+            • /imdb  - get the film information from IMDb source.
+            • /search  - get the film information from various sources."""
+            parse_mode=ParseMode.HTML,  
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
+            ),
+        )
+    elif query.data == "status":
+       query.message.edit_text(
+           text=f"""STATUS 💫
+           ✪ 𝑻𝒐𝒕𝒂𝒍 𝒇𝒊𝒍𝒆𝒔: 1035327
+           ✪ 𝑻𝒐𝒕𝒂𝒍 𝑼𝒔𝒆𝒓𝒔: 14
+           ✪ 𝑻𝒐𝒕𝒂𝒍 𝑪𝒉𝒂𝒕𝒔: 3
+           ✪ 𝑼𝒔𝒆𝒅 𝑺𝒕𝒐𝒓𝒂𝒈𝒆: 48.13 MB 𝙼𝚒𝙱
+           ✪ 𝑭𝒓𝒆𝒆 𝑺𝒕𝒐𝒓𝒂𝒈𝒆: 463.87 MB 𝙼𝚒𝙱"""
+           parse_mode=ParseMode.HTML,  
+            reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
+            ),
+        )
+
+
 
 @run_async
 @typing_action
