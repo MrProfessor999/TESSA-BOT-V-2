@@ -421,23 +421,26 @@ def DaisyX_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_tac")]]
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="⚡EXTRA⚡", callback_data="extra"
+                        ),
+                        InlineKeyboardButton(
+                            text="💫STATUS💫", callback_data="status"
+                        ),
+                    ],
+                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_")],
+                ]
             ),
-        )
-
-    
-      
-  
- elif query.data == "aboutmanu_permis":
+        )    
+    elif query.data == "aboutmanu_permis":
         query.message.edit_text(
-            text=f"<b> ｢ ABOUT 」</b>"
-            f"\n✯ 𝙼𝚈 𝙽𝙰𝙼𝙴:  𝚃𝙴𝚂𝚂𝙰."
-            f"\n\n✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/N_A_V_I_P_A_V_I>༒⚔ 𝕄𝕣 ℙ𝕣𝕠𝕗𝕖𝕤𝕤𝕠𝕣⚔༒</a>"            
-            f"\n\n✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼&𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽"
-            f"\n✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹"
-            f"\n✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱."
-            f"\n\n✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v2.3.1 [ 𝙱𝙴𝚃𝙰 ]",
-            parse_mode=ParseMode.HTML,
+            text=f"<b> ｢Auto Filter」</b>"
+            f"\n1. Make me the admin of your channel if it's private."
+            f"\n\n2. make sure that your channel does not contains cam rip, porn and fake files."            
+            f"\n3. Forward the last message to me with quotes I'll add all the files in that channel to my db.",
+            parse_mode=ParseMode.HTML,  
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
             ),
@@ -499,7 +502,9 @@ def DaisyX_about_callback(update, context):
                 ]
             ),
         )
-
+    elif query.data == "extra":
+        query.message.edit_text(
+            text=f"
 
 @run_async
 @typing_action
