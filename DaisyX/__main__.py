@@ -221,16 +221,15 @@ def start(update: Update, context: CallbackContext):
           InlineKeyboardButton( text="🔍SEARCH🔎", switch_inline_query_current_chat=''),
     ],
     [
-          InlineKeyboardButton( text="👨‍💻DEVOLOPER", url="https://t.me/N_A_V_I_P_A_V_I"
-       ),
-    ],
-]
+          InlineKeyboardButton( text="👨‍💻DEVOLOPER", url="https://t.me/N_A_V_I_P_A_V_I"),],]
+       
+    
 
             
-    else:
-        update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
-                uptime
+         else:
+             update.effective_message.reply_text(
+                "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+                  uptime
             ),
             parse_mode=ParseMode.HTML,
         )
