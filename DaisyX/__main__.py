@@ -218,7 +218,12 @@ def start(update: Update, context: CallbackContext):
             elif args[0][1:].isdigit() and "rules" in IMPORTED:
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
         
-         
+         else:
+              await cmd.reply_photo(
+                   photo="https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg"
+
+
+
          else:
              update.effective_message.reply_text(
                 "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
@@ -226,9 +231,7 @@ def start(update: Update, context: CallbackContext):
             ),
             parse_mode=ParseMode.HTML,
         )
-    else:
-         await cmd.reply_photo(
-             photo="https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg"
+    
 
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
