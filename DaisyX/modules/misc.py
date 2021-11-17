@@ -620,7 +620,7 @@ __help__ = """
 
 *➩Info:*
   ✪ /whois: Get information about user using pyrogram  method.
-
+  ✪ /imdb  - get the film information from IMDb source.
 *➩Translator:*
   ✪ /tr or /tl: To translate to your language, by default language is set to english, use /tr <lang code> for some other language!
   ✪ /splcheck: As a reply to get grammar corrected text of gibberish message.
@@ -635,6 +635,7 @@ __help__ = """
   ✪ /app <app name>: Finds an app in playstore for you
   ✪ /cash: currency converter
   ✪ /wall <query>: Get random wallpapers directly from bot!
+  ✪ /search get the film information from various sources.
 
 *➩Github:*
   ✪ /git: Returns info about a GitHub user or organization.
