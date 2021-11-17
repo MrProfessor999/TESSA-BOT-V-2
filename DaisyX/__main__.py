@@ -473,8 +473,7 @@ def DaisyX_about_callback(update, context):
         )
     elif query.data == "aboutmanu_tac":
         query.message.edit_text(
-            text=f"<b> ｢ ABOUT 」</b>"
-            
+            text=f"<b> ｢ ABOUT 」</b>",            
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
