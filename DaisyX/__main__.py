@@ -223,13 +223,7 @@ def start(update: Update, context: CallbackContext):
 
             update.effective_message.reply_photo(IMGE,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
 
-         else:
-            update.effective_message.reply_text(
-                PM_START_TEXT,
-                reply_markup=InlineKeyboardMarkup(buttons),
-                parse_mode=ParseMode.MARKDOWN,
-                timeout=60,
-            )        
+         
          else:
              update.effective_message.reply_text(
                 "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
