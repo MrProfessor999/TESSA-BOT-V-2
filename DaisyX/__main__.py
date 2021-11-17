@@ -72,7 +72,7 @@ PM_START_TEXT = """
 
 ✪ Make sure you read *𝙷𝚎𝚕𝚙* Section Below ✪ 
 """
-else:
+   else:
         await cmd.reply_photo(
             photo="https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg"
             PM_START_TEXT,
