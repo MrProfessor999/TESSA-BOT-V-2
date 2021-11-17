@@ -506,7 +506,7 @@ def DaisyX_about_callback(update, context):
             Commands and Usage:
             • /imdb  - get the film information from IMDb source.
             • /search  - get the film information from various sources."""
-            parse_mode=ParseMode.HTML,  
+            parse_mode=ParseMode.MARKDOWN,  
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
             ),
@@ -519,7 +519,7 @@ def DaisyX_about_callback(update, context):
            ✪ 𝑻𝒐𝒕𝒂𝒍 𝑪𝒉𝒂𝒕𝒔: 3
            ✪ 𝑼𝒔𝒆𝒅 𝑺𝒕𝒐𝒓𝒂𝒈𝒆: 48.13 MB 𝙼𝚒𝙱
            ✪ 𝑭𝒓𝒆𝒆 𝑺𝒕𝒐𝒓𝒂𝒈𝒆: 463.87 MB 𝙼𝚒𝙱"""
-           parse_mode=ParseMode.HTML,  
+           parse_mode=ParseMode.MARKDOWN,  
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
             ),
