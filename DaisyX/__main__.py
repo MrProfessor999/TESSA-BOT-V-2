@@ -366,15 +366,20 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"😍 𝙷𝙸 𝙶𝙻𝙰𝙳 𝚃𝙾 𝚂𝙴𝙴 𝚈𝙾𝚄 𝙰𝙶𝙰𝙸𝙽,𝙹𝚄𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝚂𝙴𝙴 𝙼𝚈 𝙿𝙾𝚅𝙴𝚁 𝚃𝙾 Know More About Me By Clicking The Below Buttons 👇",
+            text=f"✯ 𝙼𝚈 𝙽𝙰𝙼𝙴:  𝚃𝙴𝚂𝚂𝙰
+                   ✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/N_A_V_I_P_A_V_I>༒⚔ 𝕄𝕣 ℙ𝕣𝕠𝕗𝕖𝕤𝕤𝕠𝕣⚔༒</a>
+                   ✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼
+                   ✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹
+                   ✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱✯ 𝙱𝙾𝚃 𝚂𝙴𝚁𝚅𝙴𝚁: 𝙷𝙴𝚁𝙾𝙺𝚄
+                   ✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v2.3.1 [ 𝙱𝙴𝚃𝙰 ]",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="𝙷𝚘𝚠 𝚝𝚘 𝚞𝚜𝚎 𝚖𝚎", callback_data="aboutmanu_howto"
-                        ),                       
+                            text="SOURCE", callback_data="aboutmanu_credit"
+                        ),
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
                 ]
@@ -487,9 +492,7 @@ def DaisyX_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton(
-                            text="Credits", callback_data="aboutmanu_credit"
-                        ),
+                        
                         InlineKeyboardButton(text="Back", callback_data="aboutmanu_"),
                     ]
                 ]
