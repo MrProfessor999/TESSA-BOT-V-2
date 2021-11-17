@@ -64,10 +64,6 @@ from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
 
 
-IMGE = "https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg"
-
-
-
 
 PM_START_TEXT = """
 𝙷𝙴𝙻𝙻𝙾 𝚃𝚑𝚎𝚛𝚎, 𝙸𝙰𝙼 𝚃𝙴𝚂𝚂𝙰
@@ -76,8 +72,14 @@ PM_START_TEXT = """
 
 ✪ Make sure you read *𝙷𝚎𝚕𝚙* Section Below ✪ 
 """
-buttons = [
-       [
+else:
+        await cmd.reply_photo(
+            photo="https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg"
+            PM_START_TEXT,
+            parse_mode="Markdown",
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+    [[
           InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
     ],  
     [ 
@@ -93,11 +95,7 @@ buttons = [
   
 
 
-       else:
-           first_name = update.effective_user.first_name
-
-           update.effective_message.reply_photo(IMGE,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-
+       
 
 
 
