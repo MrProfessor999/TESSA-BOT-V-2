@@ -72,13 +72,10 @@ PM_START_TEXT = """
 
 ✪ Make sure you read *𝙷𝚎𝚕𝚙* Section Below ✪ 
 """
-   else:
-        await cmd.reply_photo(
-            photo="https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg"
-            PM_START_TEXT,
-            parse_mode="Markdown",
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
+PM_START_TEXT,
+parse_mode="Markdown",
+disable_web_page_preview=True,
+reply_markup=InlineKeyboardMarkup(
     [[
           InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
     ],  
@@ -232,7 +229,9 @@ def start(update: Update, context: CallbackContext):
             ),
             parse_mode=ParseMode.HTML,
         )
-
+    else:
+         await cmd.reply_photo(
+             photo="https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg"
 
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
