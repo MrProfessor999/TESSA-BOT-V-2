@@ -425,6 +425,17 @@ def DaisyX_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
+                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
+            ),
+        )
+    elif query.data == "aboutmanu_permis":
+        query.message.edit_text(
+            text=f"<b> ｢Auto Filter」</b>"
+            f"\n1. Make me the admin of your channel if it's private."
+            f"\n\n2. make sure that your channel does not contains cam rip, porn and fake files."            
+            f"\n3. Forward the last message to me with quotes I'll add all the files in that channel to my db.",
+            parse_mode=ParseMode.HTML,  
+            reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
@@ -437,18 +448,7 @@ def DaisyX_about_callback(update, context):
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_")],
                 ]
             ),
-        )    
-    elif query.data == "aboutmanu_permis":
-        query.message.edit_text(
-            text=f"<b> ｢Auto Filter」</b>"
-            f"\n1. Make me the admin of your channel if it's private."
-            f"\n\n2. make sure that your channel does not contains cam rip, porn and fake files."            
-            f"\n3. Forward the last message to me with quotes I'll add all the files in that channel to my db.",
-            parse_mode=ParseMode.HTML,  
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
-            ),
-        )
+        )                  
     elif query.data == "aboutmanu_spamprot":
         query.message.edit_text(
             text="* ｢ Anti-Spam Settings 」*"
