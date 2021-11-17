@@ -366,15 +366,16 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"HLOO CLICK POWERS FOR COMMANDS AND CLICK ABOUT FOR KNOW SOMETHING ABOUT ME 😉
+            text=f"HLOO CLICK POWERS FOR COMMANDS AND CLICK ABOUT FOR KNOW SOMETHING ABOUT ME [😉](https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg)",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="ABOUT🙂", callback_data="aboutmanu_permis"
-                        ),
+                            text="ABOUT🙂", callback_data="aboutmanu_permis"),
+                     ],
+                     [  
                         InlineKeyboardButton(
                             text="🤐Anti Spam", callback_data="aboutmanu_spamprot"
                         ),
