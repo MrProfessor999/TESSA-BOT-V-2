@@ -72,11 +72,8 @@ PM_START_TEXT = """
 
 ✪ Make sure you read *𝙷𝚎𝚕𝚙* Section Below ✪ 
 """
-PM_START_TEXT,
-parse_mode="Markdown",
-disable_web_page_preview=True,
-reply_markup=InlineKeyboardMarkup(
-    [[
+buttons = [
+    [
           InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
     ],  
     [ 
