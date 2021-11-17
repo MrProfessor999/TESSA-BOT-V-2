@@ -432,8 +432,9 @@ def DaisyX_about_callback(update, context):
             parse_mode=ParseMode.HTML,  
             reply_markup=InlineKeyboardMarkup(
                 [
-                    
-                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_")],
+                    [InlineKeyboardButton( text="SOURCE♀️", callback_data=aboutmanu_credit"),
+                   ],[
+                     InlineKeyboardButton(text="Back", callback_data="aboutmanu_")],
                 ]
             ),
         )                  
