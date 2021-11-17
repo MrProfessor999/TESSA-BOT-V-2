@@ -76,16 +76,16 @@ buttons = [
     [
           InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
     ],  
-    [                            
+    [     
+          InlineKeyboardButton( text="🔍SEARCH🔎", switch_inline_query_current_chat=''),                       
+          InlineKeyboardButton( text="❤️𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ❤️", url="https://t.me/TESSA_DOG_SUPPORT"),           
+    ],
+    [         
           InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_howto"),                        
-          InlineKeyboardButton( text="😊𝙰𝚋𝚘𝚞𝚝", callback_data="aboutmanu_"),
-    ],
-    [ 
-          InlineKeyboardButton( text="❤️𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ❤️", url="https://t.me/TESSA_DOG_SUPPORT"), 
-          InlineKeyboardButton( text="🔍SEARCH🔎", switch_inline_query_current_chat=''),
-    ],
-    [
-          InlineKeyboardButton( text="👨‍💻DEVOLOPER", url="https://t.me/N_A_V_I_P_A_V_I"),],]
+          InlineKeyboardButton( text="😊𝙰𝚋𝚘𝚞𝚝", callback_data="aboutmanu_"),],]
+    
+    
+          
   
 
 
@@ -366,15 +366,21 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"𝙷𝙻𝙾𝙾 𝙼𝚈 𝙽𝙰𝙼𝙴 𝙸𝚂 𝚃𝙴𝚂𝚂𝙰 𝙸𝙰𝙼  𝙰 𝙳𝙾𝙶 𝙰𝙽𝙳 𝙱𝙾𝚃 ✌︎ 𝙼𝚢 𝚘𝚠𝚗𝚎𝚛 𝚠𝚊𝚜[༒⚔𝕄𝕣ℙ𝕣𝕠𝕗𝕖𝕤𝕤𝕠𝕣⚔༒](https://t.me/N_A_V_I_P_A_V_I)𝙸𝙰𝙼 𝙰 𝙿𝚈𝚃𝙷𝙾𝙽 𝙱𝚁𝙴𝙴𝙳 𝙰𝙽𝙳 𝙸 𝙷𝙰𝚅𝙴 𝚃𝚆𝙾 𝚂𝙸𝚂𝚃𝙴𝚁 𝙰𝚗𝚍   [𝚂𝙰𝙺𝚄𝚁𝙰](https://t.me/SakuraFilterbot) 𝙰𝙽𝙳 [𝙳𝙰𝙸𝚂𝚈](https://t.me/DaisyXbot) 𝙼𝚈 𝚂𝚃𝙾𝙼𝙰𝙲𝙷 𝚆𝙰𝚂 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱  𝙸𝙰𝙼 𝚁𝚄𝙽𝙽𝙸𝙽𝙶 𝙸𝙽 𝙷𝙴𝚁𝙾𝙺𝚄 ",
+            text=f"HLOO CLICK POWERS FOR COMMANDS AND CLICK ABOUT FOR KNOW SOMETHING ABOUT ME 😉
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="SOURCE", callback_data="aboutmanu_credit"
+                            text="ABOUT🙂", callback_data="aboutmanu_permis"
                         ),
+                        InlineKeyboardButton(
+                            text="🤐Anti Spam", callback_data="aboutmanu_spamprot"
+                        ),
+                        InlineKeyboardButton( 
+                            text="⚡️POWERS⚡️", callback_data="help_back"
+                        ),          
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
                 ]
@@ -398,17 +404,6 @@ def DaisyX_about_callback(update, context):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton(
-                            text="💫AUTOFILTER💫", callback_data="aboutmanu_permis"
-                        ),
-                        InlineKeyboardButton(
-                            text="🤐Anti Spam", callback_data="aboutmanu_spamprot"
-                        ),
-                        InlineKeyboardButton( 
-                            text="⚡️POWERS⚡️", callback_data="help_back"
-                        ),          
-                    ],
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
                 ]
             ),
@@ -426,21 +421,14 @@ def DaisyX_about_callback(update, context):
         )
     elif query.data == "aboutmanu_permis":
         query.message.edit_text(
-            text=f"<b> ｢Auto Filter」</b>"
+            text=f"<b> ｢ABOUT」</b>"
             f"\n1. Make me the admin of your channel if it's private."
             f"\n\n2. make sure that your channel does not contains cam rip, porn and fake files."            
             f"\n3. Forward the last message to me with quotes I'll add all the files in that channel to my db.",
             parse_mode=ParseMode.HTML,  
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton(
-                            text="⚡EXTRA⚡", callback_data="extra"
-                        ),
-                        InlineKeyboardButton(
-                            text="💫STATUS💫", callback_data="status"
-                        ),
-                    ],
+                    
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_")],
                 ]
             ),
