@@ -409,7 +409,7 @@ def DaisyX_about_callback(update, context):
                             text="⚡️POWERS⚡️", callback_data="help_back"
                         ),          
                     ],
-                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_")],
+                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
                 ]
             ),
         )
@@ -417,11 +417,11 @@ def DaisyX_about_callback(update, context):
         query.message.edit_text(
             text=f"*{dispatcher.bot.first_name} Is the redisigned version of AUTOFILTERBOT and DAISY for the best performance.*"            
             f"\n\n{dispatcher.bot.first_name}'s source code was written by [Mr professor](https://t.me/N_A_V_I_P_A_V_I)"
-            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @{SUPPORT_CHAT}.",
+            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @TESSA_DOG_SUPPORT.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
+                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")]]
             ),
         )
     elif query.data == "aboutmanu_permis":
@@ -471,7 +471,7 @@ def DaisyX_about_callback(update, context):
             "\n_ A button gets added to the welcome message for them to unmute themselves. This proves they aren't a bot! soft - restricts users ability to post media for 24 hours. strong - mutes on join until they prove they're not bots._",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
+                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")]]
             ),
         )
     elif query.data == "aboutmanu_tac":
@@ -488,18 +488,18 @@ def DaisyX_about_callback(update, context):
                 [
                     [
                         
-                        InlineKeyboardButton(text="Back", callback_data="aboutmanu_"),
+                        InlineKeyboardButton(text="Back", callback_data="aboutmanu_back"),
                     ]
                 ]
             ),
         )
     elif query.data == "extra":
         query.message.edit_text(
-            text=f"""Extra Modules
-            These are the extra features of Tessa
-            Commands and Usage:
-            • /imdb  - get the film information from IMDb source.
-            • /search  - get the film information from various sources.""",
+            text=f"Extra Modules"
+            f"\nThese are the extra features of Tessa"
+            f"\n\nCommands and Usage:"
+            f"\n• /imdb  - get the film information from IMDb source."
+            f"\n\n• /search  - get the film information from various sources.",
             parse_mode=ParseMode.HTML,  
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_permis")]]
@@ -507,12 +507,12 @@ def DaisyX_about_callback(update, context):
         )
     elif query.data == "status":
        query.message.edit_text(
-           text=f"""STATUS 💫
-           ✪ 𝑻𝒐𝒕𝒂𝒍 𝒇𝒊𝒍𝒆𝒔: 1035327
-           ✪ 𝑻𝒐𝒕𝒂𝒍 𝑼𝒔𝒆𝒓𝒔: 14
-           ✪ 𝑻𝒐𝒕𝒂𝒍 𝑪𝒉𝒂𝒕𝒔: 3
-           ✪ 𝑼𝒔𝒆𝒅 𝑺𝒕𝒐𝒓𝒂𝒈𝒆: 48.13 MB 𝙼𝚒𝙱
-           ✪ 𝑭𝒓𝒆𝒆 𝑺𝒕𝒐𝒓𝒂𝒈𝒆: 463.87 MB 𝙼𝚒𝙱""",
+           text=f"STATUS 💫"
+           f"\n✪ 𝑻𝒐𝒕𝒂𝒍 𝒇𝒊𝒍𝒆𝒔: 1035327"
+           f"\n\n✪ 𝑻𝒐𝒕𝒂𝒍 𝑼𝒔𝒆𝒓𝒔: 14"
+           f"\n✪ 𝑻𝒐𝒕𝒂𝒍 𝑪𝒉𝒂𝒕𝒔: 3"
+           f"\n\n✪ 𝑼𝒔𝒆𝒅 𝑺𝒕𝒐𝒓𝒂𝒈𝒆: 48.13 MB 𝙼𝚒𝙱"
+           f"\n✪ 𝑭𝒓𝒆𝒆 𝑺𝒕𝒐𝒓𝒂𝒈𝒆: 463.87 MB 𝙼𝚒𝙱",
            parse_mode=ParseMode.HTML,  
            reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_permis")]]
