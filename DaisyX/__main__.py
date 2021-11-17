@@ -96,7 +96,7 @@ reply_markup=InlineKeyboardMarkup(
 
 
 
-HELP_STRINGS = f"""
+HELP_STRINGS =f"""
 *Main Commands :* [🤖](https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg)
 ✪ /start: Starts me! You've probably already used this.
 ✪ /help: Click this, I'll let you know about myself!
