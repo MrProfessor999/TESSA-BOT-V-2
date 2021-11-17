@@ -76,9 +76,9 @@ buttons = [
     [
           InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
     ],  
-    [ 
-          InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_"), 
-          InlineKeyboardButton( text="😊𝙰𝚋𝚘𝚞𝚝", callback_data="aboutmanu_tac"),
+    [                            
+          InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_howto"),                        
+          InlineKeyboardButton( text="😊𝙰𝚋𝚘𝚞𝚝", callback_data="aboutmanu_"),
     ],
     [ 
           InlineKeyboardButton( text="❤️𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ❤️", url="https://t.me/TESSA_DOG_SUPPORT"), 
@@ -374,14 +374,7 @@ def DaisyX_about_callback(update, context):
                     [
                         InlineKeyboardButton(
                             text="𝙷𝚘𝚠 𝚝𝚘 𝚞𝚜𝚎 𝚖𝚎", callback_data="aboutmanu_howto"
-                        ),
-                        InlineKeyboardButton(
-                            text="About", callback_data="aboutmanu_tac"
-                        ),
-                    ],
-                    [InlineKeyboardButton(
-                         text="𝙷𝚎𝚕𝚙", callback_data="help_back"
-                        ),
+                        ),                       
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
                 ]
@@ -399,7 +392,7 @@ def DaisyX_about_callback(update, context):
         query.message.edit_text(
             text=f"* ｢ BASIC HELP 」*"
             f"\nIf You Can Also Add {dispatcher.bot.first_name} To Your Chats By Clicking [Here](http://t.me/{dispatcher.bot.username}?startgroup=true) And Selecting Chat. \n"
-            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [InfinityJE](https://t.me/infinityje).\n"
+            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [TESSA SUPPORT](https://t.me/TESSA_DOG_SUPPORT).\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -407,11 +400,14 @@ def DaisyX_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="AUTOFILTER", callback_data="aboutmanu_permis"
+                            text="💫AUTOFILTER💫", callback_data="aboutmanu_permis"
                         ),
                         InlineKeyboardButton(
-                            text="Anti Spam", callback_data="aboutmanu_spamprot"
+                            text="🤐Anti Spam", callback_data="aboutmanu_spamprot"
                         ),
+                        InlineKeyboardButton( 
+                            text="⚡️POWERS⚡️", callback_data="help_back"
+                        ),          
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_")],
                 ]
