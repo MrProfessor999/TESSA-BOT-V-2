@@ -377,7 +377,7 @@ def DaisyX_about_callback(update, context):
                 [
                     [
                         InlineKeyboardButton(
-                            text="ABOUT🙂", callback_data="aboutmanu_permis"),
+                            text="SOURCE♀️", callback_data="aboutmanu_credit"),                        
                      ],
                      [  
                         InlineKeyboardButton(
@@ -436,12 +436,7 @@ def DaisyX_about_callback(update, context):
             parse_mode=ParseMode.HTML,  
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton(
-                            text="SOURCE♀️", callback_data="aboutmanu_credit"
-                        ),
-                    ],
-                    [
+                    [                        
                      InlineKeyboardButton(text="Back", callback_data="aboutmanu_")],
                 ]
             ),
