@@ -223,12 +223,14 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
-            first_name = update.effective_user.first_name      
-            update.effective_message.reply_photo(NIMG,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
+            first_name = update.effective_user.first_name
+
+            update.effective_message.reply_photo(NESRI_IMG,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
             )
     else:
-        else:
-        update.effective_message.reply_text("YES I AM ALIVE🤔..."
+        update.effective_message.reply_text(
+            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+                uptime
             ),
             parse_mode=ParseMode.HTML,
         )
