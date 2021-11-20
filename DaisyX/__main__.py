@@ -212,7 +212,7 @@ def start(update: Update, context: CallbackContext):
                    [InlineKeyboardButton( text="🔍SEARCH🔎", switch_inline_query_current_chat=''),                       
                     InlineKeyboardButton( text="❤️𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ❤️", url="https://t.me/TESSA_DOG_SUPPORT"),     
                    ],
-                   [InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_"),],]))
+                   [InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="help_back"),],]))
                      
     else:
         update.effective_message.reply_text(
