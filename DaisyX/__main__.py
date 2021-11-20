@@ -62,35 +62,34 @@ from DaisyX.modules.helper_funcs.chat_status import is_user_admin
 from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
-
-
-NESRI_IMG = "https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg"
-
-
-
-
-
 PM_START_TEXT = """
-𝙷𝙴𝙻𝙻𝙾 {}, 𝙸𝙰𝙼  𝚃𝚎𝚜𝚜𝚊
+Hello there, I'm [𝓓𝓪𝓲𝓼𝔂 𝓧](https://telegra.ph/file/473cc17913393959e0667.jpg)
 
-𝙸𝚊𝚖 𝚊 𝙿𝚘𝚠𝚎𝚛𝚏𝚞𝚕𝚕 𝚋𝚘𝚝 ✌︎ 𝙹𝚞𝚜𝚝 𝚊𝚍𝚍 𝚗𝚎 𝚝𝚘 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 𝚊𝚗𝚍 𝚜𝚎𝚎 𝚖𝚢 𝚙𝚘𝚠𝚎𝚛 😉
+I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot and I will help in managing your group
 
-✪ Make sure you read *𝙷𝚎𝚕𝚙* Section Below ✪ 
+✪ Make sure you read *INFO* Section Below ✪ 
 """
 
-    
-          
-  
+buttons = [
+    [
+        InlineKeyboardButton(text="🚀 INFO 🚀", callback_data="aboutmanu_"),
+    ],
+    [
+        InlineKeyboardButton(text="❓ Help & Commands ❓", callback_data="help_back"),
+    ],
+    [
+        InlineKeyboardButton(
+            text="💫 Add Daisy to your group 💫", url="t.me/daisyXBot?startgroup=true"
+        ),
+    ],
+]
 
 
-       
-
-
-
-HELP_STRINGS =f"""
-*Main Commands :* [🤖](https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg)
+HELP_STRINGS = f"""
+*Main Commands :* [🤖](https://telegra.ph/file/473cc17913393959e0667.jpg)
 ✪ /start: Starts me! You've probably already used this.
 ✪ /help: Click this, I'll let you know about myself!
+✪ /donate: You can support my creater using this command.
 ✪ /settings: 
    ◔ in PM: will send you your settings for all supported modules.
    ◔ in a Group: will redirect you to pm, with all that chat's settings.
@@ -100,7 +99,9 @@ HELP_STRINGS =f"""
 )
 
 
-
+DONATE_STRING = """Heya, glad to hear you want to donate!
+You can donate to the original writer's of the Base code,
+Support them  [Inuka](t.me/InukaASiTH),[Jason](t.me/imjanindu),"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -211,28 +212,22 @@ def start(update: Update, context: CallbackContext):
 
             elif args[0][1:].isdigit() and "rules" in IMPORTED:
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
+
         else:
-             
-            first_name = update.effective_user.first_name
-
-            update.effective_message.reply_photo(NESRI_IMG,PM_START_TEXT.format(escape_markdown(first_name), OWNER_ID),
-
-                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true")
-                     ],[  
-                     InlineKeyboardButton(text="🔍SEARCH🔎", switch_inline_query_current_chat=''), InlineKeyboardButton(text="❤️SUPPORT❤️", url="https://t.me/TESSA_DOG_SUPPORT")
-                     ],[
-                     InlineKeyboardButton(text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_")]]))
-                     
-
-
-                
-
+            update.effective_message.reply_text(
+                PM_START_TEXT,
+                reply_markup=InlineKeyboardMarkup(buttons),
+                parse_mode=ParseMode.MARKDOWN,
+                timeout=60,
+            )
     else:
-        update.effective_message.reply_text("YES I AM ALIVE🤔...")
+        update.effective_message.reply_text(
+            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+                uptime
+            ),
+            parse_mode=ParseMode.HTML,
+        )
 
-
-    
 
 def error_handler(update, context):
     """Log the error and send a telegram message to notify the developer."""
@@ -365,22 +360,27 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"HLOO CLICK POWERS FOR COMMANDS  [😉](https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg)",
+            text=f"*😍 Hi again!  The name's {dispatcher.bot.first_name} 😍 \n\nAs  You I'm a next generational group management bot developed by Infinity_Bots.* "
+            f"\n\n 🔥 Join [Infinity_Bots](https://t.me/Infinity_Bots) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
+            f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
+            f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)](https://telegra.ph/file/473cc17913393959e0667.jpg)"
+            f"\n\n👇 You Can Know More About Me By Clicking The Below Buttons 👇",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="SOURCE♀️", callback_data="aboutmanu_credit"),                        
-                     ],
-                     [  
-                        InlineKeyboardButton(
-                            text="🤐Anti Spam", callback_data="aboutmanu_spamprot"
+                            text="How To Use Me", callback_data="aboutmanu_howto"
                         ),
-                        InlineKeyboardButton( 
-                            text="⚡️POWERS⚡️", callback_data="help_back"
-                        ),          
+                        InlineKeyboardButton(
+                            text="T & C", callback_data="aboutmanu_tac"
+                        ),
+                    ],
+                    [
+                        InlineKeyboardButton(
+                            text="❔Help & Commands", callback_data="help_back"
+                        )
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
                 ]
@@ -398,44 +398,51 @@ def DaisyX_about_callback(update, context):
         query.message.edit_text(
             text=f"* ｢ BASIC HELP 」*"
             f"\nIf You Can Also Add {dispatcher.bot.first_name} To Your Chats By Clicking [Here](http://t.me/{dispatcher.bot.username}?startgroup=true) And Selecting Chat. \n"
-            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [TESSA SUPPORT](https://t.me/TESSA_DOG_SUPPORT).\n"
+            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [InfinityJE](https://t.me/infinityje).\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
+                    [
+                        InlineKeyboardButton(
+                            text="Admins Settings", callback_data="aboutmanu_permis"
+                        ),
+                        InlineKeyboardButton(
+                            text="Anti Spam", callback_data="aboutmanu_spamprot"
+                        ),
+                    ],
+                    [InlineKeyboardButton(text="Back", callback_data="aboutmanu_")],
                 ]
             ),
         )
     elif query.data == "aboutmanu_credit":
         query.message.edit_text(
-            text=f"*{dispatcher.bot.first_name} Is the redisigned version of AUTOFILTERBOT and DAISY for the best performance.*"            
-            f"\n\n{dispatcher.bot.first_name}'s source code was written by [Mr professor](https://t.me/N_A_V_I_P_A_V_I)"
-            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @TESSA_DOG_SUPPORT.",
+            text=f"*{dispatcher.bot.first_name} Is the redisigned version of Daisy and Naruto for the best performance.*"
+            f"\n\nBased on [Daisy](https://github.com/inukaasith/daisy) + [Naruto](https://github.com/imjanindu/narutorobot)."
+            f"\n\n{dispatcher.bot.first_name}'s source code was written by InukaASiTH and Imjanindu"
+            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @{SUPPORT_CHAT}.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")]]
+                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_tac")]]
             ),
         )
+
     elif query.data == "aboutmanu_permis":
         query.message.edit_text(
-            text=f"<b> ｢ABOUT」</b>"
-            f"\n✯ 𝙼𝚈 𝙽𝙰𝙼𝙴:  𝚃𝙴𝚂𝚂𝙰."
-            f"\n\n✯ 𝙲𝚁𝙴𝙰𝚃𝙾𝚁: <a href=https://t.me/N_A_V_I_P_A_V_I>༒⚔ 𝕄𝕣 ℙ𝕣𝕠𝕗𝕖𝕤𝕤𝕠𝕣⚔༒</a>"            
-            f"\n✯ 𝙻𝙸𝙱𝚁𝙰𝚁𝚈: 𝙿𝚈𝚁𝙾𝙶𝚁𝙰𝙼&𝚃𝙴𝙻𝙴𝚃𝙷𝙾𝙽"
-            f"\n\n✯ 𝙻𝙰𝙽𝙶𝚄𝙰𝙶𝙴: 𝙿𝚈𝚃𝙷𝙾𝙽 𝟹"
-            f"\n✯ 𝙳𝙰𝚃𝙰 𝙱𝙰𝚂𝙴: 𝙼𝙾𝙽𝙶𝙾 𝙳𝙱."
-            f"\n\n✯ 𝙱𝚄𝙸𝙻𝙳 𝚂𝚃𝙰𝚃𝚄𝚂: v2.3.1 [ 𝙱𝙴𝚃𝙰 ]",
-            parse_mode=ParseMode.HTML,  
+            text=f"<b> ｢ Admin Permissions 」</b>"
+            f"\nTo avoid slowing down, {dispatcher.bot.first_name} caches admin rights for each user. This cache lasts about 10 minutes; this may change in the future. This means that if you promote a user manually (without using the /promote command), {dispatcher.bot.first_name} will only find out ~10 minutes later."
+            f"\n\nIF you want to update them immediately, you can use the /admincache command,thta'll force {dispatcher.bot.first_name} to check who the admins are again and their permissions"
+            f"\n\nIf you are getting a message saying:"
+            f"\n<Code>You must be this chat administrator to perform this action!</code>"
+            f"\nThis has nothing to do with {dispatcher.bot.first_name}'s rights; this is all about YOUR permissions as an admin. {dispatcher.bot.first_name} respects admin permissions; if you do not have the Ban Users permission as a telegram admin, you won't be able to ban users with {dispatcher.bot.first_name}. Similarly, to change {dispatcher.bot.first_name} settings, you need to have the Change group info permission."
+            f"\n\nThe message very clearly says that you need these rights - <i>not {dispatcher.bot.first_name}.</i>",
+            parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [
-                    [                        
-                     InlineKeyboardButton(text="Back", callback_data="aboutmanu_")],
-                ]
+                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
             ),
-        )                  
+        )
     elif query.data == "aboutmanu_spamprot":
         query.message.edit_text(
             text="* ｢ Anti-Spam Settings 」*"
@@ -462,48 +469,34 @@ def DaisyX_about_callback(update, context):
             "\n_ A button gets added to the welcome message for them to unmute themselves. This proves they aren't a bot! soft - restricts users ability to post media for 24 hours. strong - mutes on join until they prove they're not bots._",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")]]
+                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
             ),
         )
     elif query.data == "aboutmanu_tac":
         query.message.edit_text(
-            text=f"<b> ｢ ABOUT 」</b>",            
+            text=f"<b> ｢ Terms and Conditions 」</b>\n"
+            f"\n<i>To Use This Bot, You Need To Read Terms and Conditions Carefully.</i>\n"
+            f"\n✪ We always respect your privacy \n  We never log into bot's api and spying on you \n  We use a encripted database \n  Bot will automatically stops if someone logged in with api."
+            f"\n✪ Always try to keep credits, so \n  This hardwork is done by Infinity_Bots team spending many sleepless nights.. So, Respect it."
+            f"\n✪ Some modules in this bot is owned by different authors, So, \n  All credits goes to them \n  Also for <b>Paul Larson for Marie</b>."
+            f"\n✪ If you need to ask anything about \n  this bot, Go @{SUPPORT_CHAT}."
+            f"\n✪ If you asking nonsense in Support \n  Chat, you will get warned/banned."
+            f"\n✪ All api's we used owned by originnal authors \n  Some api's we use Free version \n  Please don't overuse AI Chat."
+            f"\n✪ We don't Provide any support to forks,\n  So these terms and conditions not applied to forks \n  If you are using a fork of DaisyXBot we are not resposible for anything."
+            f"\n\nFor any kind of help, related to this bot, Join @{SUPPORT_CHAT}."
+            f"\n\n<i>Terms & Conditions will be changed anytime</i>\n",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        
-                        InlineKeyboardButton(text="Back", callback_data="aboutmanu_back"),
+                        InlineKeyboardButton(
+                            text="Credits", callback_data="aboutmanu_credit"
+                        ),
+                        InlineKeyboardButton(text="Back", callback_data="aboutmanu_"),
                     ]
                 ]
             ),
         )
-    elif query.data == "extra":
-        query.message.edit_text(
-            text=f"Extra Modules"
-            f"\nThese are the extra features of Tessa"
-            f"\n\nCommands and Usage:"
-            f"\n• /imdb  - get the film information from IMDb source."
-            f"\n\n• /search  - get the film information from various sources.",
-            parse_mode=ParseMode.HTML,  
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_permis")]]
-            ),
-        )
-    elif query.data == "status":
-       query.message.edit_text(
-           text=f"STATUS 💫"
-           f"\n✪ 𝑻𝒐𝒕𝒂𝒍 𝒇𝒊𝒍𝒆𝒔: 1035327"
-           f"\n\n✪ 𝑻𝒐𝒕𝒂𝒍 𝑼𝒔𝒆𝒓𝒔: 14"
-           f"\n✪ 𝑻𝒐𝒕𝒂𝒍 𝑪𝒉𝒂𝒕𝒔: 3"
-           f"\n\n✪ 𝑼𝒔𝒆𝒅 𝑺𝒕𝒐𝒓𝒂𝒈𝒆: 48.13 MB 𝙼𝚒𝙱"
-           f"\n✪ 𝑭𝒓𝒆𝒆 𝑺𝒕𝒐𝒓𝒂𝒈𝒆: 463.87 MB 𝙼𝚒𝙱",
-           parse_mode=ParseMode.HTML,  
-           reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_permis")]]
-            ),
-        )
-
 
 
 @run_async
