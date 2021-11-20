@@ -22,4 +22,5 @@ __help__=
             "\n_If you're looking for a way to automatically warn users when they say certain things, use the /addwarn command._"
             "\n\n- /welcomemute <off/soft/strong>: All users that join, get muted"
             "\n_ A button gets added to the welcome message for them to unmute themselves. This proves they aren't a bot! soft - restricts users ability to post media for 24 hours. strong - mutes on join until they prove they're not bots._
-            
+
+__mod_name__ = "Anti-Spam🤐"            
