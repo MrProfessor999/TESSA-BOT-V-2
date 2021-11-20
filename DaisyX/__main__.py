@@ -222,7 +222,17 @@ def start(update: Update, context: CallbackContext):
             elif args[0][1:].isdigit() and "rules" in IMPORTED:
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
         else:
-             update.effective_message.reply_photo("https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg"),
+             
+            first_name = update.effective_user.first_name
+
+            update.effective_message.reply_photo(NESRI_IMG,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
+
+                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
+                    [[InlineKeyboardButton(text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true".format(bot.username))],                      
+                     [InlineKeyboardButton(text="🔍SEARCH🔎", switch_inline_query_current_chat=''), InlineKeyboardButton(text="❤️SUPPORT❤️", url="https://t.me/TESSA_DOG_SUPPORT")],
+                     [InlineKeyboardButton(text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_")]]))
+                     
+
 
                 
 
