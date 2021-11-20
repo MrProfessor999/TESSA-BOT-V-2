@@ -77,9 +77,17 @@ PM_START_TEXT = """
 
 ✪ Make sure you read *𝙷𝚎𝚕𝚙* Section Below ✪ 
 """
-
-                                  
-          
+buttons = [
+     [                           
+          InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
+    ],  
+    [     
+          InlineKeyboardButton( text="🔍SEARCH🔎", switch_inline_query_current_chat=''),                       
+          InlineKeyboardButton( text="❤️𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ❤️", url="https://t.me/TESSA_DOG_SUPPORT"),           
+    ],
+    [         
+          InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_"),],]))
+                     
     
           
   
@@ -216,16 +224,7 @@ def start(update: Update, context: CallbackContext):
         else:
              update.effective_message.reply_photo("https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg"),
 
-                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
-    ],  
-    [     
-          InlineKeyboardButton( text="🔍SEARCH🔎", switch_inline_query_current_chat=''),                       
-          InlineKeyboardButton( text="❤️𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ❤️", url="https://t.me/TESSA_DOG_SUPPORT"),           
-    ],
-    [         
-          InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_"),],]))
-                     
+                
 
     else:
         update.effective_message.reply_text("YES I AM ALIVE🤔...")
