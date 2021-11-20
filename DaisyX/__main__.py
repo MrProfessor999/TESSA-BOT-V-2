@@ -207,10 +207,12 @@ def start(update: Update, context: CallbackContext):
             update.effective_message.reply_photo(NESRI_IMG,PM_START_TEXT.format(escape_markdown(first_name), OWNER_ID),
 
                 parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton(text="🕹️SUMMON ME🕹️", url="t.me/{}?startgroup=true".format(bot.username))],
-                     [InlineKeyboardButton(text="HELP🛠️", callback_data="help_back")], 
-                     [InlineKeyboardButton(text="❤️UPDATES❤️", url="https://t.me/NAZRIYAUPDATES"), InlineKeyboardButton(text="❤️SUPPORT❤️", url="https://t.me/NAZRIYASUPPORT")],
-                     [InlineKeyboardButton(text="❣️SOURCE CODE❣️", url="https://github.com/MR-JINN-OF-TG/TG-BOT")]]))
+                   [[InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
+                   ],
+                   [InlineKeyboardButton( text="🔍SEARCH🔎", switch_inline_query_current_chat=''),                       
+                    InlineKeyboardButton( text="❤️𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ❤️", url="https://t.me/TESSA_DOG_SUPPORT"),     
+                   ],
+                   [InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_"),],]))
                      
     else:
         update.effective_message.reply_text(
