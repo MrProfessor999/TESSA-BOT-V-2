@@ -67,18 +67,17 @@ NESRI_IMG ="https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg"
 
 
 PM_START_TEXT = """
-Hello there, I'm [𝓓𝓪𝓲𝓼𝔂 𝓧](https://telegra.ph/file/473cc17913393959e0667.jpg)
+Hello {}, I'm 𝚃𝙴𝚂𝚂𝙰
 
-I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot and I will help in managing your group
-
-✪ Make sure you read *INFO* Section Below ✪ 
+I am 𝙰 𝙿𝙾𝚆𝙴𝚁𝙵𝚄𝙻𝙻 𝙱𝙾𝚃 𝙹𝚄𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝚂𝙴𝙴 𝙼𝚈 𝙿𝙾𝚅𝙴𝚁𝚂
+✪ Make sure you read *𝙷𝙴𝙻𝙿* Section Below ✪ 
 """
 
 
 
 
 HELP_STRINGS = f"""
-*Main Commands :* [🤖](https://telegra.ph/file/473cc17913393959e0667.jpg)
+*Main Commands :* [🤖](https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg)
 ✪ /start: Starts me! You've probably already used this.
 ✪ /help: Click this, I'll let you know about myself!
 ✪ /settings: 
@@ -205,7 +204,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
 
-            update.effective_message.reply_photo(NESRI_IMG,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
+            update.effective_message.reply_photo(NESRI_IMG,PM_START_TEXT.format(escape_markdown(first_name), OWNER_ID),
 
                 parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton(text="🕹️SUMMON ME🕹️", url="t.me/{}?startgroup=true".format(bot.username))],
@@ -353,22 +352,23 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"*HI CLICK HELP BUTTON FOR INFORMATION ABOUT COMMANDS
+            text=f"*HI CLICK HELP BUTTON FOR INFORMATION ABOUT COMMANDS*",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="How To Use Me", callback_data="aboutmanu_howto"
+                            text="Source❣️", callback_data="aboutmanu_credit"
                         ),
+                        
                         InlineKeyboardButton(
-                            text="T & C", callback_data="aboutmanu_tac"
+                            text="Anti Spam🤐", callback_data="aboutmanu_spamprot"
                         ),
                     ],
                     [
                         InlineKeyboardButton(
-                            text="❔Help & Commands", callback_data="help_back"
+                            text="POVERS💫", callback_data="help_back"
                         )
                     ],
                     [InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")],
@@ -387,7 +387,7 @@ def DaisyX_about_callback(update, context):
         query.message.edit_text(
             text=f"* ｢ BASIC HELP 」*"
             f"\nIf You Can Also Add {dispatcher.bot.first_name} To Your Chats By Clicking [Here](http://t.me/{dispatcher.bot.username}?startgroup=true) And Selecting Chat. \n"
-            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [InfinityJE](https://t.me/infinityje).\n"
+            f"\n\nYou Can get support {dispatcher.bot.first_name} by joining [Tessa support](https://t.me/TESSA_DOG_SUPPORT).\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
@@ -407,14 +407,13 @@ def DaisyX_about_callback(update, context):
         )
     elif query.data == "aboutmanu_credit":
         query.message.edit_text(
-            text=f"*{dispatcher.bot.first_name} Is the redisigned version of Daisy and Naruto for the best performance.*"
-            f"\n\nBased on [Daisy](https://github.com/inukaasith/daisy) + [Naruto](https://github.com/imjanindu/narutorobot)."
-            f"\n\n{dispatcher.bot.first_name}'s source code was written by InukaASiTH and Imjanindu"
-            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @{SUPPORT_CHAT}.",
+            text=f"*{dispatcher.bot.first_name} Is the redisigned version of Daisy and AUTOFILTERBOT for the best performance.*"            
+            f"\n\n{dispatcher.bot.first_name}'s source code was written by [MR PROFESSOR](https://t.me/N_A_V_I_P_A_V_I  "
+            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At {SUPPORT_CHAT}.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_tac")]]
+                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")]]
             ),
         )
 
@@ -458,7 +457,7 @@ def DaisyX_about_callback(update, context):
             "\n_ A button gets added to the welcome message for them to unmute themselves. This proves they aren't a bot! soft - restricts users ability to post media for 24 hours. strong - mutes on join until they prove they're not bots._",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_howto")]]
+                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")]]
             ),
         )
     elif query.data == "aboutmanu_tac":
