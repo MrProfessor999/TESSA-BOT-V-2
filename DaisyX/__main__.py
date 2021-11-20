@@ -208,7 +208,7 @@ def start(update: Update, context: CallbackContext):
 
                 parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton(text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/{}?startgroup=true".format(bot.username))],                      
-                     [InlineKeyboardButton(text="🔍SEARCH🔎", switch_inline_query_current_chat="), InlineKeyboardButton(text="❤️SUPPORT❤️", url="https://t.me/NAZRIYASUPPORT")],
+                     [InlineKeyboardButton(text="🔍SEARCH🔎", switch_inline_query_current_chat=") InlineKeyboardButton(text="❤️SUPPORT❤️", url="https://t.me/NAZRIYASUPPORT")],
                      [InlineKeyboardButton(text="HELPℹ️", callback_data="help_back")]]))
                      
 
