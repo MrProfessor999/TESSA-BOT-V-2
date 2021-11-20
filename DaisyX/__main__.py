@@ -64,7 +64,7 @@ from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
 
 
-NIMG = "https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg"
+NESRI_IMG = "https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg"
 
 
 
