@@ -218,23 +218,20 @@ def start(update: Update, context: CallbackContext):
             first_name = update.effective_user.first_name
 
             update.effective_message.reply_photo(NESRI_IMG,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
-            parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
-        [[InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
+
+                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
+                    [[InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
     ],  
     [     
           InlineKeyboardButton( text="🔍SEARCH🔎", switch_inline_query_current_chat=''),                       
           InlineKeyboardButton( text="❤️𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ❤️", url="https://t.me/TESSA_DOG_SUPPORT"),           
     ],
     [         
-          InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_"),],]
-            )
+          InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_"),],]))
+                     
+
     else:
-        update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
-                uptime
-            ),
-            parse_mode=ParseMode.HTML,
-        )
+        update.effective_message.reply_text("YES I AM ALIVE😉...")
 
     
 
