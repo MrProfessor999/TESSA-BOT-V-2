@@ -71,7 +71,7 @@ NESRI_IMG = "https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg"
 
 
 PM_START_TEXT = """
-𝙷𝙴𝙻𝙻𝙾 THERE, 𝙸𝙰𝙼  𝚃𝚎𝚜𝚜𝚊
+𝙷𝙴𝙻𝙻𝙾 {}, 𝙸𝙰𝙼  𝚃𝚎𝚜𝚜𝚊
 
 𝙸𝚊𝚖 𝚊 𝙿𝚘𝚠𝚎𝚛𝚏𝚞𝚕𝚕 𝚋𝚘𝚝 ✌︎ 𝙹𝚞𝚜𝚝 𝚊𝚍𝚍 𝚗𝚎 𝚝𝚘 𝚢𝚘𝚞𝚛 𝚐𝚛𝚘𝚞𝚙 𝚊𝚗𝚍 𝚜𝚎𝚎 𝚖𝚢 𝚙𝚘𝚠𝚎𝚛 😉
 
@@ -225,7 +225,7 @@ def start(update: Update, context: CallbackContext):
              
             first_name = update.effective_user.first_name
 
-            update.effective_message.reply_photo(NESRI_IMG,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
+            update.effective_message.reply_photo(NESRI_IMG,PM_START_TEXT.format(escape_markdown(first_name), OWNER_ID),
 
                 parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton(text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true".format(bot.username))],                      
