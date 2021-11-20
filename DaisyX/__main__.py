@@ -183,24 +183,11 @@ def test(update, context):
 
 
 @run_async
-def start(update: Update, context: CallbackContext):
-    args = context.args
-    uptime = get_readable_time((time.time() - StartTime))
+def start(bot: Bot, update: Update, args: List[str]):
     if update.effective_chat.type == "private":
         if len(args) >= 1:
             if args[0].lower() == "help":
                 send_help(update.effective_chat.id, HELP_STRINGS)
-            elif args[0].lower().startswith("ghelp_"):
-                mod = args[0].lower().split("_", 1)[1]
-                if not HELPABLE.get(mod, False):
-                    return
-                send_help(
-                    update.effective_chat.id,
-                    HELPABLE[mod].__help__,
-                    InlineKeyboardMarkup(
-                        [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
-                    ),
-                )
 
             elif args[0].lower().startswith("stngs_"):
                 match = re.match("stngs_(.*)", args[0].lower())
@@ -217,21 +204,18 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
 
-            update.effective_message.reply_photoIMG,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
+            update.effective_message.reply_photo(NESRI_IMG,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
 
                 parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
-    ],  
-    [     
-          InlineKeyboardButton( text="🔍SEARCH🔎", switch_inline_query_current_chat=''),                       
-          InlineKeyboardButton( text="❤️𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ❤️", url="https://t.me/TESSA_DOG_SUPPORT"),           
-    ],
-    [         
-          InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="aboutmanu_"),],]))
+                    [[InlineKeyboardButton(text="🕹️SUMMON ME🕹️", url="t.me/{}?startgroup=true".format(bot.username))],
+                     [InlineKeyboardButton(text="HELP🛠️", callback_data="help_back")], 
+                     [InlineKeyboardButton(text="❤️UPDATES❤️", url="https://t.me/NAZRIYAUPDATES"), InlineKeyboardButton(text="❤️SUPPORT❤️", url="https://t.me/NAZRIYASUPPORT")],
+                     [InlineKeyboardButton(text="❣️SOURCE CODE❣️", url="https://github.com/MR-JINN-OF-TG/TG-BOT")]]))
                      
 
     else:
-        update.effective_message.reply_text("YES I AM ALIVE😉...")
+        update.effective_message.reply_text("YES I AM ALIVE🤔...")
+
 
     
 
