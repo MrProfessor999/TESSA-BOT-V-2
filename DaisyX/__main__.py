@@ -183,11 +183,24 @@ def test(update, context):
 
 
 @run_async
-def start(bot: Bot, update: Update, args: List[str]):
+def start(update: Update, context: CallbackContext):
+    args = context.args
+    uptime = get_readable_time((time.time() - StartTime))
     if update.effective_chat.type == "private":
         if len(args) >= 1:
             if args[0].lower() == "help":
                 send_help(update.effective_chat.id, HELP_STRINGS)
+            elif args[0].lower().startswith("ghelp_"):
+                mod = args[0].lower().split("_", 1)[1]
+                if not HELPABLE.get(mod, False):
+                    return
+                send_help(
+                    update.effective_chat.id,
+                    HELPABLE[mod].__help__,
+                    InlineKeyboardMarkup(
+                        [[InlineKeyboardButton(text="Back", callback_data="help_back")]]
+                    ),
+                )
 
             elif args[0].lower().startswith("stngs_"):
                 match = re.match("stngs_(.*)", args[0].lower())
@@ -200,7 +213,6 @@ def start(bot: Bot, update: Update, args: List[str]):
 
             elif args[0][1:].isdigit() and "rules" in IMPORTED:
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
-
         else:
             first_name = update.effective_user.first_name
 
