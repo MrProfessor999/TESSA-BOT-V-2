@@ -231,7 +231,7 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_text("YES I AM ALIVE🤔...")
 
-aboutmanu_
+
     
 
 def error_handler(update, context):
