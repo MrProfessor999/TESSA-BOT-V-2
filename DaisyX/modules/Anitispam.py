@@ -1,3 +1,5 @@
+__help__=
+
 ｢ Anti-Spam Settings 」*"
             "\n- /antispam <on/off/yes/no>: Change antispam security settings in the group, or return your current settings(when no arguments)."
             "\n_This helps protect you and your groups by removing spam flooders as quickly as possible._"
