@@ -62,6 +62,10 @@ from DaisyX.modules.helper_funcs.chat_status import is_user_admin
 from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
+
+NESRI_IMG ="
+
+
 PM_START_TEXT = """
 Hello there, I'm [𝓓𝓪𝓲𝓼𝔂 𝓧](https://telegra.ph/file/473cc17913393959e0667.jpg)
 
@@ -70,26 +74,13 @@ I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot and I will help in managi
 ✪ Make sure you read *INFO* Section Below ✪ 
 """
 
-buttons = [
-    [
-        InlineKeyboardButton(text="🚀 INFO 🚀", callback_data="aboutmanu_"),
-    ],
-    [
-        InlineKeyboardButton(text="❓ Help & Commands ❓", callback_data="help_back"),
-    ],
-    [
-        InlineKeyboardButton(
-            text="💫 Add Daisy to your group 💫", url="t.me/daisyXBot?startgroup=true"
-        ),
-    ],
-]
+
 
 
 HELP_STRINGS = f"""
 *Main Commands :* [🤖](https://telegra.ph/file/473cc17913393959e0667.jpg)
 ✪ /start: Starts me! You've probably already used this.
 ✪ /help: Click this, I'll let you know about myself!
-✪ /donate: You can support my creater using this command.
 ✪ /settings: 
    ◔ in PM: will send you your settings for all supported modules.
    ◔ in a Group: will redirect you to pm, with all that chat's settings.
@@ -99,9 +90,7 @@ HELP_STRINGS = f"""
 )
 
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
-You can donate to the original writer's of the Base code,
-Support them  [Inuka](t.me/InukaASiTH),[Jason](t.me/imjanindu),"""
+
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -214,12 +203,16 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
-            update.effective_message.reply_text(
-                PM_START_TEXT,
-                reply_markup=InlineKeyboardMarkup(buttons),
-                parse_mode=ParseMode.MARKDOWN,
-                timeout=60,
-            )
+            first_name = update.effective_user.first_name
+
+            update.effective_message.reply_photo(NESRI_IMG,PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_ID),
+
+                parse_mode=ParseMode.MARKDOWN, reply_markup=InlineKeyboardMarkup(
+                    [[InlineKeyboardButton(text="🕹️SUMMON ME🕹️", url="t.me/{}?startgroup=true".format(bot.username))],
+                     [InlineKeyboardButton(text="HELP🛠️", callback_data="help_back")], 
+                     [InlineKeyboardButton(text="❤️UPDATES❤️", url="https://t.me/NAZRIYAUPDATES"), InlineKeyboardButton(text="❤️SUPPORT❤️", url="https://t.me/NAZRIYASUPPORT")],
+                     [InlineKeyboardButton(text="❣️SOURCE CODE❣️", url="https://github.com/MR-JINN-OF-TG/TG-BOT")]]))
+                     
     else:
         update.effective_message.reply_text(
             "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
