@@ -402,7 +402,7 @@ def DaisyX_about_callback(update, context):
         query.message.edit_text(
             text=f"*{dispatcher.bot.first_name} Is the redisigned version of 𝐀𝐔𝐓𝐎𝐅𝐈𝐋𝐓𝐄𝐑𝐁𝐎𝐓 𝐀𝐍𝐃 𝐃𝐀𝐈𝐒𝐘 for the best performance.*"            
             f"\n\n{dispatcher.bot.first_name}'s source code was written by [MR PROFESSOR](https://t.me/N_A_V_I_P_A_V_I)"
-            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At {SUPPORT_CHAT}.",
+            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @TESSA_DOG_SUPPORT.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
