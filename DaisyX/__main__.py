@@ -63,7 +63,7 @@ from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-Hello THERE, I'm [𝚃𝙴𝚂𝚂](https://t.me/TESSA_DOG_BOT)[𝙰](https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg)
+Hello THERE, I'm [𝚃𝙴𝚂𝚂𝙰](https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg)
 I am 𝙰 𝙿𝙾𝚆𝙴𝚁𝙵𝚄𝙻𝙻 𝙱𝙾𝚃 𝙹𝚄𝚂𝚃 𝙰𝙳𝙳 𝙼𝙴 𝚃𝙾 𝚈𝙾𝚄𝚁 𝙶𝚁𝙾𝚄𝙿 𝙰𝙽𝙳 𝚂𝙴𝙴 𝙼𝚈 𝙿𝙾𝚅𝙴𝚁𝚂
 
 ✪ Make sure you read *𝙷𝙴𝙻𝙿* Section Below ✪ 
@@ -347,8 +347,7 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"*😍 Hi again!  The name's {dispatcher.bot.first_name} 😍 \n\nAs  You I'm a next generational group management bot developed by [MR PROFESSOR] (https://t.me/N_A_V_I_P_A_V_I).* "
-            f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
+            text=f"*😍 Hi again!  The name's {dispatcher.bot.first_name} 😍 \n\nAs  You I'm a next generational group management bot developed by [MR PROFESSOR](https://t.me/N_A_V_I_P_A_V_I).* "
             f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)](https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg)"
             f"\n\n👇 You Can Know More About Me By Clicking The Below Buttons 👇",
             parse_mode=ParseMode.MARKDOWN,
@@ -401,8 +400,8 @@ def DaisyX_about_callback(update, context):
         )
     elif query.data == "aboutmanu_credit":
         query.message.edit_text(
-            text=f"*{dispatcher.bot.first_name} Is the redisigned version of [𝐀𝐔𝐓𝐎𝐅𝐈𝐋𝐓𝐄𝐑𝐁𝐎𝐓](https://github.com/EvamariaTG/EvaMaria) 𝐀𝐍𝐃 [𝐃𝐀𝐈𝐒𝐘](https://github.com/teamdaisyx/daisyx) for the best performance.*"            
-            f"\n\n{dispatcher.bot.first_name}'s source code was written by [MR PROFESSOR](https://t.me/N_A_V_I_P_A_V_I  "
+            text=f"*{dispatcher.bot.first_name} Is the redisigned version of 𝐀𝐔𝐓𝐎𝐅𝐈𝐋𝐓𝐄𝐑𝐁𝐎𝐓 𝐀𝐍𝐃 𝐃𝐀𝐈𝐒𝐘 for the best performance.*"            
+            f"\n\n{dispatcher.bot.first_name}'s source code was written by [MR PROFESSOR](https://t.me/N_A_V_I_P_A_V_I)"
             f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At {SUPPORT_CHAT}.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
