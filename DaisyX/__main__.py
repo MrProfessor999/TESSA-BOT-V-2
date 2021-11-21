@@ -348,7 +348,7 @@ def help_button(update, context):
 @run_async
 def DaisyX_about_callback(update, context):
     query = update.callback_query
-    if query.data == "aboutman":
+    if query.data == "aboutmanu_":
         query.message.edit_text(
             text=f"*HI CLICK HELP BUTTON FOR INFORMATION ABOUT COMMANDS*",
             parse_mode=ParseMode.MARKDOWN,
@@ -359,11 +359,7 @@ def DaisyX_about_callback(update, context):
                         InlineKeyboardButton(
                             text="Source❣️", callback_data="aboutmanu_credit"
                         ),
-                        
-                        InlineKeyboardButton(
-                            text="Anti Spam🤐", callback_data="aboutmanu_spamprot"
-                        ),
-                    ],
+                    ],                            
                     [
                         InlineKeyboardButton(
                             text="POVERS💫", callback_data="help_back"
