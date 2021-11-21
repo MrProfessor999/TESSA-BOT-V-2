@@ -401,14 +401,13 @@ def DaisyX_about_callback(update, context):
         )
     elif query.data == "aboutmanu_credit":
         query.message.edit_text(
-            text=f"*{dispatcher.bot.first_name} Is the redisigned version of Daisy and Naruto for the best performance.*"
-            f"\n\nBased on [Daisy](https://github.com/inukaasith/daisy) + [Naruto](https://github.com/imjanindu/narutorobot)."
-            f"\n\n{dispatcher.bot.first_name}'s source code was written by InukaASiTH and Imjanindu"
-            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At @{SUPPORT_CHAT}.",
+            text=f"*{dispatcher.bot.first_name} Is the redisigned version of [𝐀𝐔𝐓𝐎𝐅𝐈𝐋𝐓𝐄𝐑𝐁𝐎𝐓](https://github.com/EvamariaTG/EvaMaria) 𝐀𝐍𝐃 [𝐃𝐀𝐈𝐒𝐘](https://github.com/teamdaisyx/daisyx) for the best performance.*"            
+            f"\n\n{dispatcher.bot.first_name}'s source code was written by [MR PROFESSOR](https://t.me/N_A_V_I_P_A_V_I  "
+            f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At {SUPPORT_CHAT}.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_tac")]]
+                [[InlineKeyboardButton(text="Back", callback_data="aboutmanu_back")]]
             ),
         )
 
