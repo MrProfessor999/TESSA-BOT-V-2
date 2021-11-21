@@ -68,9 +68,12 @@ I am 𝙰 𝙿𝙾𝚆𝙴𝚁𝙵𝚄𝙻𝙻 𝙱𝙾𝚃 𝙹𝚄𝚂𝚃 �
 
 ✪ Make sure you read *𝙷𝙴𝙻𝙿* Section Below ✪ 
 """
-
-
-
+buttons = [
+     [
+          InlineKeyboardButton( text="➕⚡Add ME TO YOUR GROUP⚡➕", url="t.me/TESSA_DOG_BOT?startgroup=true"), 
+    ],[InlineKeyboardButton( text="🔍SEARCH🔎", switch_inline_query_current_chat=''),                       
+          InlineKeyboardButton( text="❤️𝚂𝚄𝙿𝙿𝙾𝚁𝚃 ❤️", url="https://t.me/TESSA_DOG_SUPPORT"),           
+    ],[InlineKeyboardButton( text="ℹ️𝙷𝚎𝚕𝚙", callback_data="help_back"),]]
 
 HELP_STRINGS = f"""
 *Main Commands :* [🤖](https://telegra.ph/file/38ca2f1d0e5e7672e3232.jpg)
@@ -85,9 +88,7 @@ HELP_STRINGS = f"""
 )
 
 
-DONATE_STRING = """Heya, glad to hear you want to donate!
-You can donate to the original writer's of the Base code,
-Support them  [Inuka](t.me/InukaASiTH),[Jason](t.me/imjanindu),"""
+
 
 IMPORTED = {}
 MIGRATEABLE = []
