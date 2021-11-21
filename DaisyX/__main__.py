@@ -401,7 +401,7 @@ def DaisyX_about_callback(update, context):
         )
     elif query.data == "aboutmanu_credit":
         query.message.edit_text(
-            text=f"*{dispatcher.bot.first_name} Is the redisigned version of Daisy and AUTOFILTERBOT for the best performance.*"            
+            text=f"*{dispatcher.bot.first_name} Is the redisigned version of [𝐀𝐔𝐓𝐎𝐅𝐈𝐋𝐓𝐄𝐑𝐁𝐎𝐓](https://github.com/EvamariaTG/EvaMaria) 𝐀𝐍𝐃 [𝐃𝐀𝐈𝐒𝐘](https://github.com/teamdaisyx/daisyx) for the best performance.*"            
             f"\n\n{dispatcher.bot.first_name}'s source code was written by [MR PROFESSOR](https://t.me/N_A_V_I_P_A_V_I  "
             f"\n\nIf Any Question About {dispatcher.bot.first_name}, \nLet Us Know At {SUPPORT_CHAT}.",
             parse_mode=ParseMode.MARKDOWN,
